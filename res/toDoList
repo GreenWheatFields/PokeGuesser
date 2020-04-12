@@ -1,0 +1,6 @@
+TODO LIST;
+
+[ ] fix bug where the main class isn't recognized
+[ ] parse and assign applicable variables from JSON data
+[ ] fix big where pokemon with a single type cannot be checked for a second type without nullpointer
+[ ] create introductory dialouge for the game.
