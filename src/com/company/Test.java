@@ -9,13 +9,17 @@ public class Test {
     public static void main(String[] args) throws IOException {
     test2 tst = new test2();
     tst.testConn();
-    int heightlol;
-    heightlol = tst.getHeight();
-        System.out.println(heightlol);
+    int pokeHeight;
+    pokeHeight = tst.getHeight();
+    System.out.println(pokeHeight);
+    int id = tst.getID();
+        System.out.println(id);
 
     }
 
-}
+    }
+
+
 /*          URLConnection request = url.openConnection();
             request.connect();
             JsonParser jp = new JsonParser(); //from gson

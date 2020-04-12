@@ -21,10 +21,11 @@ public class test2 {
     String badResponse = null;
     int responseCode;
     StringBuffer responseContent = new StringBuffer();
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/1"/* + randomPoke*/;
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/1"  /* + randomPoke*/;
     URL url = new URL(pokeURL);
     String secondType;
     int height;
+    int id;
     URLConnection request = url.openConnection();
     JsonParser jp = new JsonParser();
     JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
@@ -61,14 +62,20 @@ public class test2 {
         JsonObject types1 = test.getAsJsonObject("type");
         secondType = types1.get("name").getAsString();
         System.out.println(secondType);*/   //will need to add if else statement to check if a second type exist going to focus on top level attributes for now
-
+        int id = rootobj.get("id").getAsInt();
         System.out.println(height);
     }
-    public int getHeight(){
+    public int getHeight() throws IOException {
+        request.connect(); //don't think this is necessary, will figure it out laterr
         height = rootobj.get("height").getAsInt();
-        System.out.println(height);
+
         return height;
     }
+    public int getID() throws IOException{
+        id = rootobj.get("id").getAsInt();
+        return id;
+    }
+
 
 }
 /*      Random random = new Random();
