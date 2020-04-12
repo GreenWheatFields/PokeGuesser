@@ -1,26 +1,17 @@
 package com.company;
-import com.google.gson.*;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.*;
-import java.lang.reflect.Array;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+
 public class Test {
 
 
 
     public static void main(String[] args) throws IOException {
     test2 tst = new test2();
-        tst.testConn();
-        tst.stats();
-        System.out.println(tst.test1);
+    tst.testConn();
+    int heightlol;
+    heightlol = tst.getHeight();
+        System.out.println(heightlol);
 
     }
 

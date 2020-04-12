@@ -1,6 +1,5 @@
 package com.company;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -24,8 +23,12 @@ public class test2 {
     StringBuffer responseContent = new StringBuffer();
     String pokeURL = "https://pokeapi.co/api/v2/pokemon/1"/* + randomPoke*/;
     URL url = new URL(pokeURL);
-    String test1;
-
+    String secondType;
+    int height;
+    URLConnection request = url.openConnection();
+    JsonParser jp = new JsonParser();
+    JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
+    JsonObject rootobj = root.getAsJsonObject();
     public void testConn() throws IOException {
 
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -48,19 +51,23 @@ public class test2 {
     }
 }
     public void stats() throws IOException {
-        URLConnection request = url.openConnection();
+
         request.connect();
-        JsonParser jp = new JsonParser(); //from gson
-        JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject(); //Convert the input stream to a json element
-        JsonObject rootobj = root.getAsJsonObject();
-        //May be an array, may be an object.
-        JsonArray types = root.getAsJsonObject().getAsJsonArray("types");
+         //from gson
+         //Convert the input stream to a json element
+
+        /*JsonArray types = root.getAsJsonObject().getAsJsonArray("types");
         JsonObject test = types.get(1).getAsJsonObject(); //bug: bulbasaur has two types, so when you got to a pokemone with one type this line searches for a type that doesnt exist.
         JsonObject types1 = test.getAsJsonObject("type");
-        //System.out.println(types1);
-        test1 = types1.get("name").getAsString();
-        //System.out.println(test1);
+        secondType = types1.get("name").getAsString();
+        System.out.println(secondType);*/   //will need to add if else statement to check if a second type exist going to focus on top level attributes for now
 
+        System.out.println(height);
+    }
+    public int getHeight(){
+        height = rootobj.get("height").getAsInt();
+        System.out.println(height);
+        return height;
     }
 
 }
