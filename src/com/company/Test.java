@@ -2,14 +2,15 @@ package com.company;
 
 import java.io.*;
 
-public class Test {
+public class Test { //pseudo main class for testing
 
 
 
     public static void main(String[] args) throws IOException {
-
-    int one = 1;
-    while (one < 2){
+        MainDialouge mainDialouge = new MainDialouge();
+        int one = 1;
+        mainDialouge.openingLines();
+   /* while (one < 2){
         test2 tst = new test2();
         String pokeURL = tst.pokeURL;
         System.out.println(pokeURL);
@@ -18,7 +19,8 @@ public class Test {
         test2 tst = new test2();
         String pokeURL = tst.pokeURL;
         System.out.println(pokeURL);
-
+        tst.testConn();
+        */
 
 
     }

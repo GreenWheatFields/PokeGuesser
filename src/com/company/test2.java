@@ -18,7 +18,6 @@ import java.util.Scanner;
 public class test2 {
     public test2() throws IOException {
     }
-    test3 tst3 = new test3();
     Random random = new Random();
     int randomPoke = random.nextInt(151) + 1;
     BufferedReader br;
@@ -77,10 +76,10 @@ public class test2 {
     }
                 con.disconnect();
 }
-    public void stats() throws IOException {
+    /*public void stats() throws IOException {
 
 
-    }
+    }*/
     public int getHeight() {
         //request.connect(); //don't think this is necessary, will figure it out later
         height = rootobj.get("height").getAsInt(); //decimeters
