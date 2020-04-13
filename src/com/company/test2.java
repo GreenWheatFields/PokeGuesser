@@ -25,7 +25,7 @@ public class test2 {
     String badResponse = null;
     int responseCode;
     StringBuffer responseContent = new StringBuffer();
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/25"  /* + randomPoke*/;
+    String pokeURL= "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
     URL url = new URL(pokeURL);
     String secondType;
     int height;
@@ -35,10 +35,20 @@ public class test2 {
     int baseExperience;
     String firstTypeName;
     String secondTypeName;
-    URLConnection request = url.openConnection();
+    HttpURLConnection request = (HttpURLConnection) url.openConnection();
     JsonParser jp = new JsonParser();
     JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
     JsonObject rootobj = root.getAsJsonObject();
+    public String newConnect() throws IOException {
+        int one = 1;
+        while (one < 2) {
+            randomPoke = random.nextInt(151) + 1;
+            pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
+            one++;
+
+        }
+        return pokeURL;
+    }
 
 
     public void testConn() throws IOException {
@@ -61,6 +71,7 @@ public class test2 {
                 badResponse = "";
                 System.out.println(line + badResponse + responseCode);
     }
+                con.disconnect();
 }
     public void stats() throws IOException {
 
@@ -69,7 +80,6 @@ public class test2 {
     public int getHeight() {
         //request.connect(); //don't think this is necessary, will figure it out later
         height = rootobj.get("height").getAsInt(); //decimeters
-
         return height;
     }
     public int getID() {
@@ -108,6 +118,7 @@ public class test2 {
         }
         return secondTypeName;
     }
+
 
 
 }
