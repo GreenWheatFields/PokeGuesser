@@ -10,11 +10,14 @@ public class Test {
     test2 tst = new test2();
     tst.testConn();
 
-        System.out.println(tst.pokeURL);
-        String name = tst.getName();
-        tst.pokeURL = tst.newConnect();
-        System.out.println(tst.pokeURL);
 
+
+        String name = tst.getName();
+        //System.out.println(name);
+        String pokeURL = tst.pokeURL;
+        System.out.println(tst.pokeURL);
+        //name = tst.getName();
+        //System.out.println(name);
 
 
 

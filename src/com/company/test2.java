@@ -18,6 +18,7 @@ import java.util.Scanner;
 public class test2 {
     public test2() throws IOException {
     }
+    test3 tst3 = new test3();
     Random random = new Random();
     int randomPoke = random.nextInt(151) + 1;
     BufferedReader br;
@@ -25,7 +26,7 @@ public class test2 {
     String badResponse = null;
     int responseCode;
     StringBuffer responseContent = new StringBuffer();
-    String pokeURL= "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
+    String pokeURL = tst3.newConnect();
     URL url = new URL(pokeURL);
     String secondType;
     int height;
@@ -39,16 +40,19 @@ public class test2 {
     JsonParser jp = new JsonParser();
     JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
     JsonObject rootobj = root.getAsJsonObject();
-    public String newConnect() throws IOException {
+
+
+    /*public String newConnect() throws IOException {
         int one = 1;
         while (one < 2) {
             randomPoke = random.nextInt(151) + 1;
             pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
             one++;
-
         }
+
+
         return pokeURL;
-    }
+    }*/
 
 
     public void testConn() throws IOException {
@@ -69,7 +73,7 @@ public class test2 {
                 else {
                 line = "";
                 badResponse = "";
-                System.out.println(line + badResponse + responseCode);
+                //System.out.println(line + badResponse + responseCode);
     }
                 con.disconnect();
 }
