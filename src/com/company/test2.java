@@ -40,6 +40,7 @@ public class test2 {
     JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
     JsonObject rootobj = root.getAsJsonObject();
 
+
     public void testConn() throws IOException {
 
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -63,25 +64,15 @@ public class test2 {
 }
     public void stats() throws IOException {
 
-        request.connect();
-         //from gson
-         //Convert the input stream to a json element
 
-        /*JsonArray types = root.getAsJsonObject().getAsJsonArray("types");
-        JsonObject test = types.get(1).getAsJsonObject(); //bug: bulbasaur has two types, so when you got to a pokemone with one type this line searches for a type that doesnt exist.
-        JsonObject types1 = test.getAsJsonObject("type");
-        secondType = types1.get("name").getAsString();
-        System.out.println(secondType);*/   //will need to add if else statement to check if a second type exist going to focus on top level attributes for now
-        int id = rootobj.get("id").getAsInt();
-        System.out.println(height);
     }
-    public int getHeight() throws IOException {
+    public int getHeight() {
         //request.connect(); //don't think this is necessary, will figure it out later
         height = rootobj.get("height").getAsInt(); //decimeters
 
         return height;
     }
-    public int getID() throws IOException{
+    public int getID() {
         id = rootobj.get("id").getAsInt();
         return id;
     }
@@ -106,7 +97,6 @@ public class test2 {
         return firstTypeName;
     }
     public String getType2(){
-        //secondTypeName = null;
         JsonArray types2 = root.getAsJsonObject().getAsJsonArray("types");
         int typeAmount = types2.size();
         if (typeAmount > 1){
@@ -116,12 +106,6 @@ public class test2 {
         }else{
             secondTypeName = null;
         }
-
-        /*JsonObject secondTypeParent = types2.get(1).getAsJsonObject();
-        JsonObject secondType = secondTypeParent.getAsJsonObject("type");
-        secondTypeName = secondType.get("name").getAsString();*/
-
-
         return secondTypeName;
     }
 

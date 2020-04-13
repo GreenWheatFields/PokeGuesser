@@ -3,6 +3,8 @@ TODO LIST;
 [x] fix bug where the main class isn't recognized
 [ ] parse and assign applicable variables from JSON data
 [x] fix big where pokemon with a single type cannot be checked for a second type without nullpointer
+[ ] Add dialogue to testConn method. Also add response to an HTTP response of 0;
+[ ] Add method to disconnect connection, maybe this will make it easier to get random pokemon. either way, the way a connection is opened will need to be optimized.
 [ ] figure out how to get a random pokemon whenever i need a new pokemon. I think i can do it by adding randomePoke and pokeURL to their own method and calling it. not sure, will focus on the basic first
 [ ] create introductory dialogue for the game.
 [ ] Learn how to make a GUI
