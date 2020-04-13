@@ -2,6 +2,8 @@ TODO LIST;
 
 [x] fix bug where the main class isn't recognized
 [ ] parse and assign applicable variables from JSON data
-[ ] fix big where pokemon with a single type cannot be checked for a second type without nullpointer
+[x] fix big where pokemon with a single type cannot be checked for a second type without nullpointer
 [ ] figure out how to get a random pokemon whenever i need a new pokemon. I think i can do it by adding randomePoke and pokeURL to their own method and calling it. not sure, will focus on the basic first
 [ ] create introductory dialogue for the game.
+[ ] Learn how to make a GUI
+[ ] Learn how to download images linked in API and display them in the GUI

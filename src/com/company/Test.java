@@ -14,6 +14,11 @@ public class Test {
     System.out.println(pokeHeight);
     int id = tst.getID();
         System.out.println(id);
+    String firstTypeName = tst.getType();
+        System.out.println(firstTypeName);
+    String secondTypeName = tst.getType2();
+        System.out.println(secondTypeName);
+
 
     }
 
