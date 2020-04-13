@@ -6,10 +6,14 @@ import java.util.Random;
 public class test3 {
 
 Random random = new Random();
-    public test3() throws IOException {
-    }
     String pokeURL;
     int randomPoke;
+public test3() throws IOException {
+    }
+    public int randomPoke(){
+        randomPoke = random.nextInt(151) + 1;
+    return  randomPoke;
+    }
     public String newConnect(){
             int one = 1;
 

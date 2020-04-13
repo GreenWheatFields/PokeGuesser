@@ -26,7 +26,7 @@ public class test2 {
     String badResponse = null;
     int responseCode;
     StringBuffer responseContent = new StringBuffer();
-    String pokeURL = tst3.newConnect();
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
     URL url = new URL(pokeURL);
     String secondType;
     int height;

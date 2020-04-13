@@ -7,26 +7,37 @@ public class Test {
 
 
     public static void main(String[] args) throws IOException {
-    test2 tst = new test2();
-    tst.testConn();
+
+    int one = 1;
+    while (one < 2){
+        test2 tst = new test2();
+        String pokeURL = tst.pokeURL;
+        System.out.println(pokeURL);
+        one++;
+    }
+        test2 tst = new test2();
+        String pokeURL = tst.pokeURL;
+        System.out.println(pokeURL);
 
 
 
-        String name = tst.getName();
-        //System.out.println(name);
+    }
+
+    }
+
+/*String name = tst.getName();
+        System.out.println(name);
         String pokeURL = tst.pokeURL;
         System.out.println(tst.pokeURL);
-        //name = tst.getName();
-        //System.out.println(name);
+        name = tst.getName();
+        System.out.println(name);
+        tst = null;*/
 
 
 
 
-    }
 
-    }
-
-/*int pokeHeight;
+    /*int pokeHeight;
     pokeHeight = tst.getHeight();
     int id = tst.getID();
         System.out.println(id);
