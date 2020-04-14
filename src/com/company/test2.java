@@ -61,7 +61,7 @@ public class test2 {
                 con.setReadTimeout(5000);
                 con.setConnectTimeout(5000);
                 responseCode = con.getResponseCode();
-                System.out.println(responseCode);
+                //System.out.println(responseCode);
                 if (responseCode > 299) {
                 br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
                 while ((line = br.readLine()) != null) {
@@ -69,12 +69,21 @@ public class test2 {
                 badResponse = "BAD HTTPS RESPONSE";
                 }
                 br.close();}
-                else {
+                else if (responseCode == 0){
+                    badResponse = "CANNOT CONNECT TO THE INTERNET AND/OR CANNOT CONNECT TO POKEAPI. PLEASE CHECK BOTH CONNECTIONS";
+                }
+                    else {
                 line = "";
                 badResponse = "";
                 //System.out.println(line + badResponse + responseCode);
     }
-                con.disconnect();
+                String message = "Testing connection to PokeApi...  https response code = " + responseCode + badResponse + line;
+                if (responseCode == 200){
+                    String good = ". good!";
+                    message += good;
+                }
+        System.out.println(message);
+                    con.disconnect();
 }
     /*public void stats() throws IOException {
 

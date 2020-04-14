@@ -7,9 +7,9 @@ public class Test { //pseudo main class for testing
 
 
     public static void main(String[] args) throws IOException {
-        MainDialouge mainDialouge = new MainDialouge();
+        MainDialogue mainDialouge = new MainDialogue();
         int one = 1;
-        mainDialouge.openingLines();
+        mainDialouge.runPokeGuesser();
    /* while (one < 2){
         test2 tst = new test2();
         String pokeURL = tst.pokeURL;
