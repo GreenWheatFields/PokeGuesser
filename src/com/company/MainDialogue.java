@@ -22,6 +22,7 @@ public class MainDialogue {
         double weightInLbs;
         String type2Message;
         String guess;
+        int revealName;
 
         int correct = 0;
         intro();
@@ -61,10 +62,14 @@ public class MainDialogue {
             System.out.println("The base experience for this Pokemon is " + baseExp);
             System.out.println("This Pokemon is of type " + type1 + type2Message);
             System.out.println("And finally, the first letter of this Pokemon's name is " + firstLetter);
-            System.out.println(name);
+            System.out.println("Good luck, type your guess below. if at anytime you want to reveal the full name type 'reveal'");
             tst = null;
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {
+                if (guess.equalsIgnoreCase("reveal")){
+                    System.out.println(name);
+                }
+
                 tries++;
                 System.out.println("incorrect. Tries = " + tries);
                 guess = userInput.nextLine();
@@ -98,6 +103,11 @@ public class MainDialogue {
         System.out.println("In future versions you will be able to choose to include or exclude whatever generation of Pokémon you want!\n");
         System.out.println("Future versions will have a lot more features such as Pokémon sprites, typo detection, and a GUI!\n");
         System.out.println("Until then, enjoy version 1 of PokeGuesser!");
+        System.out.println("To begin press enter. Please wait a second after hitting enter for everything to load");
+        Scanner userInput = new Scanner(System.in);
+        String next = userInput.nextLine();
+
+
 
     }
 
