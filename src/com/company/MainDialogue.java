@@ -102,7 +102,7 @@ public class MainDialogue {
         System.out.println("In this initial version of PokeGuesser, you will choose from the original 151 Pokémon!\n");
         System.out.println("In future versions you will be able to choose to include or exclude whatever generation of Pokémon you want!\n");
         System.out.println("Future versions will have a lot more features such as Pokémon sprites, typo detection, and a GUI!\n");
-        System.out.println("Until then, enjoy version 1 of PokeGuesser!");
+        System.out.println("Until then, enjoy version 0.1 of PokeGuesser!");
         System.out.println("To begin press enter. Please wait a second after hitting enter for everything to load");
         Scanner userInput = new Scanner(System.in);
         String next = userInput.nextLine();
