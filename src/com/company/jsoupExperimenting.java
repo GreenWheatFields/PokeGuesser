@@ -13,7 +13,7 @@ import javax.print.Doc;
 public class jsoupExperimenting {
     public static void main(String[] args) throws IOException {
         System.out.println("test");
-        Document doc = Jsoup.connect("https://bulbapedia.bulbagarden.net/wiki/Monferno_(Pok%C3%A9mon)").userAgent("Mozilla/5.0").get();
+        Document doc = Jsoup.connect("https://bulbapedia.bulbagarden.net/wiki/litwick_(Pok%C3%A9mon)").userAgent("Mozilla/5.0").get();
         String selector = "#mw-content-text > p:nth-child(3)";
         Elements elements = doc.select(selector);
         ArrayList<String> test = new ArrayList<>();
