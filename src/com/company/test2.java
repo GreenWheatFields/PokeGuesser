@@ -129,6 +129,14 @@ public class test2 {
         }
         return secondTypeName;
     }
+    public String getFrontSprite(){
+
+        return null;//for now
+    }
+    public String getBackSprite(){
+
+        return null; //for now
+    }
 
 
 

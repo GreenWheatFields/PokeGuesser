@@ -23,7 +23,7 @@ public class jsoupExperimenting {
         int parseText = 2;
         while (one < 2) {
             parseText++;
-            if (parseText >= 10){
+            if (parseText >= 8){
                 break;
             }
             Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0").get();
@@ -46,7 +46,7 @@ public class jsoupExperimenting {
 
             one--;
 
-            one++;
+
         }
 
 

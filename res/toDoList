@@ -1,7 +1,7 @@
 TODO LIST;
 
 [x] fix bug where the main class isn't recognized
-[ ] parse and assign applicable variables from JSON data
+[ ] get and assign applicable variables from JSON data
 [x] fix big where pokemon with a single type cannot be checked for a second type without nullpointer
 [x] Add dialogue to testConn method. Also add response to an HTTP response of 0;
 [x] Add method to disconnect connection, maybe this will make it easier to get random pokemon. either way, the way a connection is opened will need to be optimized.
@@ -13,6 +13,9 @@ TODO LIST;
 [ ] Merge test classes into main class.
 [ ] Learn how to make a GUI
 [ ] Learn how to download images linked in API and display them in the GUI
+[ ] get the article titles from Bublapedia as well as the body text
+[ ] Consistently get sprites urls from bulbapedia
+[ ] figure out how to "find and replace" pokemons name from the scrapped bublapedia data
 /////////////////////////////////////////////////////////////////////////////
 KNOWN BUGS
 [ ]Unnecessarily checks https response every time a new Pokemon is generated
