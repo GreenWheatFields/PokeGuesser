@@ -23,16 +23,18 @@ public class MainDialogue {
         String type2Message;
         String guess;
         int revealName;
+        String pokeDesc;
 
         int correct = 0;
-        intro();
+        //intro();
 
 
         var one = 1;
         while (one < 2){
             int tries = 0;
             test2 tst = new test2();
-            tst.testConn();
+            jsoupExperimenting js = new jsoupExperimenting();
+            //tst.testConn();
             System.out.println("Generating random pokemon...");
             name = tst.getName();
             height = tst.getHeight();
@@ -43,6 +45,10 @@ public class MainDialogue {
             baseExp = tst.getBaseExperience();
             type1 = tst.getType();
             type2 = tst.getType2();
+            pokeDesc = js.getPokeDesc();
+            System.out.println(name + pokeDesc + "aaaaaaaaaaaa");
+
+
             if (type2 == null){
                 type2 = "";
                 type2Message = "";
@@ -50,7 +56,7 @@ public class MainDialogue {
                 type2Message = " and " + type2;
             }
             firstLetter = String.valueOf(name.charAt(0));
-            System.out.println("This Pokémon's id number is " + id);
+           /* System.out.println("This Pokémon's id number is " + id);
             System.out.println("Their height in decimetres is " + height);
             System.out.printf("Which is "+ "%.2f", heightInInches);
             System.out.print(" inches.");
@@ -89,7 +95,8 @@ public class MainDialogue {
 
             one++;
 
-
+*/
+           one++;
         }
 
 
