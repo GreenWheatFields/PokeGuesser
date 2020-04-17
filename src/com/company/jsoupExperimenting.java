@@ -18,8 +18,11 @@ public class jsoupExperimenting {
         String name = tst.getName();
         String url = "https://bulbapedia.bulbagarden.net/wiki/" + name + "_(Pok%C3%A9mon)";
         String desc = null;
+        String detailedSprite = null;
+        String lulw = null;
         System.out.println(name);
         ArrayList<String> test = new ArrayList<>();
+        ArrayList<String> test1 = new ArrayList<>();
         var one = 1;
         int parseText = 2;
         while (one < 2) {
@@ -29,17 +32,31 @@ public class jsoupExperimenting {
             }
             Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0").get();
             String selector1 = "#mw-content-text > p:nth-child(" + parseText + ")";
-          // String selector2 = "";
+            String selector2 = "#mw-content-text > table:nth-child(2) > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > a > img";
             Elements elements = doc.select(selector1);
-            //Elements sprites = doc.select
+            Elements sprites = doc.select(selector2);
+            lulw = sprites.attr("src");
 
             for (Element e : elements) {
                 test.add(e.text());
+                
+            }
+            for (Element e : sprites){
+
+
             }
 
         }
+
+
+
         desc = test.toString().replace("[", "").replace("]", "").replace(name.substring(0,1).toUpperCase() + name.substring(1), "______");
         System.out.println(desc);
+
+        detailedSprite = lulw.replace("//", "");
+        System.out.println(detailedSprite);
+
+
     }
 }
 

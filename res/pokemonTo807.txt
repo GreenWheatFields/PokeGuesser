@@ -645,7 +645,7 @@ Zekrom,
 Landorus, 
 Kyurem, 
 Keldeo, 
-Meloetta, 
+Meloetta, * (meloetta-aria)
 Genesect, 
 Chespin, 
 Quilladin, 

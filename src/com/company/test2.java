@@ -18,7 +18,7 @@ public class test2 {
     public test2() throws IOException {
     }
     Random random = new Random();
-    int randomPoke = random.nextInt(151) + 1;
+    int randomPoke = random.nextInt(807) + 1;
     BufferedReader br;
     String line;
     String badResponse = null;
