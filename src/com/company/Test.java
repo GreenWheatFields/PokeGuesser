@@ -11,7 +11,7 @@ public class Test { //pseudo main class for testing
         MainDialogue mainDialouge = new MainDialogue();
 
         int one = 1;
-        mainDialouge.runPokeGuesser();
+        MainDialogue.runPokeGuesser();
    /* while (one < 2){
         test2 tst = new test2();
         String pokeURL = tst.pokeURL;

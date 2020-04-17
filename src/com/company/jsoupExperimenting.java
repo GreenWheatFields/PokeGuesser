@@ -53,6 +53,7 @@ public class jsoupExperimenting {
         desc = test.toString().replace("[", "").replace("]", "").replace(name.substring(0,1).toUpperCase() + name.substring(1), "______");
         System.out.println(desc);
 
+        assert lulw != null;
         detailedSprite = lulw.replace("//", "");
         System.out.println(detailedSprite);
 
