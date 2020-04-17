@@ -41,10 +41,7 @@ public class jsoupExperimenting {
                 test.add(e.text());
                 
             }
-            for (Element e : sprites){
 
-
-            }
 
         }
 
