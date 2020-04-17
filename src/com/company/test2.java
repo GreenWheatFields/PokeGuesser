@@ -34,23 +34,14 @@ public class test2 {
     int baseExperience;
     String firstTypeName;
     String secondTypeName;
+    String frontSprite;
+    String backSprite;
     HttpURLConnection request = (HttpURLConnection) url.openConnection();
     JsonParser jp = new JsonParser();
     JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
     JsonObject rootobj = root.getAsJsonObject();
 
 
-    /*public String newConnect() throws IOException {
-        int one = 1;
-        while (one < 2) {
-            randomPoke = random.nextInt(151) + 1;
-            pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
-            one++;
-        }
-
-
-        return pokeURL;
-    }*/
 
 
     public void testConn() throws IOException {
@@ -131,11 +122,18 @@ public class test2 {
     }
     public String getFrontSprite(){
 
-        return null;//for now
+        JsonObject sprite1 = root.getAsJsonObject().getAsJsonObject("sprites");
+        frontSprite = sprite1.get("front_default").getAsString();
+        System.out.println(frontSprite);
+        return frontSprite;
     }
     public String getBackSprite(){
 
-        return null; //for now
+        JsonObject sprite1 = root.getAsJsonObject().getAsJsonObject("sprites");
+        backSprite = sprite1.get("back_default").getAsString();
+        System.out.println(backSprite);
+
+        return backSprite;
     }
 
 

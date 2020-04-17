@@ -7,7 +7,9 @@ public class Test { //pseudo main class for testing
 
 
     public static void main(String[] args) throws IOException {
+
         MainDialogue mainDialouge = new MainDialogue();
+
         int one = 1;
         mainDialouge.runPokeGuesser();
    /* while (one < 2){
