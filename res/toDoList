@@ -16,8 +16,9 @@ TODO LIST;
 [ ] Learn how to make a GUI
 [ ] Learn how to download images linked in API and display them in the GUI
 [ ] Finish cmd version
-[ ] Handle problem pokemon and how they interact with bublbapedia
+[x] Handle problem pokemon and how they interact with bublbapedia
 [ ] Suppress deprecated warning
+[ ] typo detection, game modes, timer
 /////////////////////////////////////////////////////////////////////////////
 KNOWN BUGS
 [ ]Unnecessarily checks https response every time a new Pokemon is generated

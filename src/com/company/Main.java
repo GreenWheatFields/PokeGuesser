@@ -10,8 +10,10 @@ public class Main {
 
 
         Stats stats = new Stats();
+        stats.getPokeDesc();
         //stats.testConn();
-        stats.getFirstGens();
+        //stats.getFirstGens();
+       //stats.getPokeDesc();
        /* String name = stats.getName();
         System.out.println(name);
         stats.getPokeDesc();

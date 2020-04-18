@@ -19,6 +19,8 @@ public class MainDialogue {
         String firstLetter;
         String type2Message;
         String guess;
+        String pokeDesc;
+        String detailedSprite; //url
 
         double heightInInches;
         double weightInLbs;
@@ -43,6 +45,16 @@ public class MainDialogue {
             type1 = stats.getType();
             type2 = stats.getType2();
             firstLetter = String.valueOf(name.charAt(0));
+            pokeDesc = stats.getPokeDesc();
+            detailedSprite = stats.getDetailedSprite();
+
+
+
+
+
+
+
+
             if (type2 == null){
                 type2 = "";
                 type2Message = "";

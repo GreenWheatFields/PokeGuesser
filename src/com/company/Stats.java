@@ -33,7 +33,7 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/83" ;///+ randomPoke;
     String pokeDesc = null;
     String detailedSprite = null;
     String firstGens;
@@ -165,8 +165,12 @@ public class Stats {
         return backSprite;
     }
     public String getPokeDesc() throws IOException {
-
+        checkName ck = new checkName();
         name = rootobj.get("name").getAsString(); //might be inefficient but it works
+        name = ck.checkName(name);
+        String parseKey = ck.getParseKey();
+        System.out.println(parseKey);
+        //System.out.println(name);
         while (one < 2) {
             parseText++;
             if (parseText > 8){  // parseText > x , x will most likely need to be a variable that changed with selected difficulty  //3 only gets the absoloute first line, 4 is evolutions, 7 is where more infomration comes in, but its not consisitent
@@ -182,6 +186,7 @@ public class Stats {
             }
         }
         pokeDesc = desc.toString().replace("[", "").replace("]", "").replace(name.substring(0,1).toUpperCase() + name.substring(1), "______");
+       // System.out.println(pokeDesc);
         return pokeDesc;
     }
     public String getDetailedSprite() throws IOException {
