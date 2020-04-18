@@ -21,19 +21,24 @@ public class MainDialogue {
         String guess;
         String pokeDesc;
         String detailedSprite; //url
+        String frontSprite;
+        String backSprite;
+        String firstGens;
+
 
         double heightInInches;
         double weightInLbs;
 
         Scanner userInput = new Scanner(System.in);
-
+        Stats stat = new Stats();
+        stat.testConn();
+        stat = null;
         intro();
 
         while (one < 2){
 
             int tries = 0;
             Stats stats = new Stats();
-            stats.testConn(); //try this outside the loop. also addd a test for bublapedia
             System.out.println("Generating random pokemon...");
             name = stats.getName();
             height = stats.getHeight();
@@ -47,13 +52,9 @@ public class MainDialogue {
             firstLetter = String.valueOf(name.charAt(0));
             pokeDesc = stats.getPokeDesc();
             detailedSprite = stats.getDetailedSprite();
-
-
-
-
-
-
-
+            frontSprite = stats.getFrontSprite();
+            backSprite = stats.getBackSprite();
+            firstGens = stats.getFirstGens();
 
             if (type2 == null){
                 type2 = "";
@@ -61,8 +62,8 @@ public class MainDialogue {
             }else{
                 type2Message = " and " + type2;
             }
-
-            System.out.println("This Pokémon's id number is " + id);
+            //all of this is annoying to look at, and can probably be done in one line
+            System.out.println("This Pokémon's id number is " + id + "" + "it first appeared in " + firstGens);
             System.out.println("Their height in decimetres is " + height);
             System.out.printf("Which is "+ "%.2f", heightInInches);
             System.out.print(" inches.");
@@ -73,7 +74,11 @@ public class MainDialogue {
             System.out.println("");
             System.out.println("The base experience for this Pokemon is " + baseExp);
             System.out.println("This Pokemon is of type " + type1 + type2Message);
-            System.out.println("And finally, the first letter of this Pokemon's name is " + firstLetter);
+            System.out.println("The first letter of this Pokemon's name is " + firstLetter);
+            System.out.println(pokeDesc);
+            System.out.println("if you'd like to see a picture of this pokemon, you can got to any of the these links");
+            System.out.println("In game sprite, front: " + frontSprite);
+            System.out.println("In game sprite back: " + backSprite);
             System.out.println("Good luck, type your guess below. if at anytime you want to reveal the full name type 'reveal'");
             stats = null;
             guess = userInput.nextLine();
@@ -100,14 +105,15 @@ public class MainDialogue {
 
     public static void intro(){
         System.out.println("With that out the way, Welcome to PokeGuesser, and thank you for playing!\n");
-        System.out.println("PokeGuesser generates a random Pokémon from PokeAPI and its your job to guess!\n");
+        System.out.println("PokeGuesser generates a random Pokémon and its your job to guess!\n");
         System.out.println("In this initial version of PokeGuesser, you will choose from the original 151 Pokémon!\n");
         System.out.println("In future versions you will be able to choose to include or exclude whatever generation of Pokémon you want!\n");
         System.out.println("Future versions will have a lot more features such as Pokémon sprites, typo detection, and a GUI!\n");
-        System.out.println("Until then, enjoy version 0.1 of PokeGuesser!");
+        System.out.println("Until then, enjoy version 0.2 of PokeGuesser!");
         System.out.println("To begin press enter. Please wait a second after hitting enter for everything to load");
         Scanner userInput = new Scanner(System.in);
         String next = userInput.nextLine();
+        if (next == null){}
 
 
 

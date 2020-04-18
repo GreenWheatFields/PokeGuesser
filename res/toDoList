@@ -24,4 +24,5 @@ KNOWN BUGS
 [ ]Unnecessarily checks https response every time a new Pokemon is generated
 [ ]"Pokemon" is inconsistent with the accented e.
 [ ] when user inputs 'reveal' it also shows that as an incorrect answer. not sure if i want that.
+[ ] hitting enter without typing anything results in an incorrect guess.
 [x] pokeAPI only has game indices up to #649, possible fix: all pokemon from 650 to 721 first appear in x and y 721 to 807 first appear in sun/moon

@@ -33,7 +33,7 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/83" ;///+ randomPoke;
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
     String pokeDesc = null;
     String detailedSprite = null;
     String firstGens;
@@ -144,8 +144,7 @@ public class Stats {
             String secondGen = secondGenParent.getAsJsonPrimitive("name").getAsString();
             firstGens = firstGen.substring(0,1).toUpperCase() + firstGen.substring(1) + "/" + secondGen.substring(0,1).toUpperCase() + secondGen.substring(1);
         }
-        System.out.println(firstGens);
-        return null;
+        return firstGens;
     }
 
 
@@ -153,24 +152,22 @@ public class Stats {
 
         JsonObject sprite1 = root.getAsJsonObject().getAsJsonObject("sprites");
         frontSprite = sprite1.get("front_default").getAsString();
-        System.out.println(frontSprite);
         return frontSprite;
     }
     public String getBackSprite(){
 
         JsonObject sprite1 = root.getAsJsonObject().getAsJsonObject("sprites");
         backSprite = sprite1.get("back_default").getAsString();
-        System.out.println(backSprite);
-
         return backSprite;
     }
     public String getPokeDesc() throws IOException {
         checkName ck = new checkName();
-        name = rootobj.get("name").getAsString(); //might be inefficient but it works
+        name = rootobj.get("name").getAsString();
         name = ck.checkName(name);
         String parseKey = ck.getParseKey();
-        System.out.println(parseKey);
-        //System.out.println(name);
+        if (parseKey == null){
+            parseKey = name.substring(0,1).toUpperCase() + name.substring(1);}
+
         while (one < 2) {
             parseText++;
             if (parseText > 8){  // parseText > x , x will most likely need to be a variable that changed with selected difficulty  //3 only gets the absoloute first line, 4 is evolutions, 7 is where more infomration comes in, but its not consisitent
@@ -185,8 +182,7 @@ public class Stats {
                 desc.add(e.text());
             }
         }
-        pokeDesc = desc.toString().replace("[", "").replace("]", "").replace(name.substring(0,1).toUpperCase() + name.substring(1), "______");
-       // System.out.println(pokeDesc);
+        pokeDesc = desc.toString().replace("[", "").replace("]", "").replace(parseKey, "______");
         return pokeDesc;
     }
     public String getDetailedSprite() throws IOException {
@@ -198,7 +194,6 @@ public class Stats {
         Elements sprites = doc.select(selector2);
         urlPlaceholder = sprites.attr("src");
         detailedSprite = urlPlaceholder.replace("//", "");
-        System.out.println(detailedSprite);
         return detailedSprite;
     }
 }

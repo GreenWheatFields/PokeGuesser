@@ -9,8 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        Stats stats = new Stats();
-        stats.getPokeDesc();
+        MainDialogue.runPokeGuesser();
         //stats.testConn();
         //stats.getFirstGens();
        //stats.getPokeDesc();
