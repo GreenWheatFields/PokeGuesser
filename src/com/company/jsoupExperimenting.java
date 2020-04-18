@@ -14,7 +14,7 @@ import javax.print.Doc;
 public class jsoupExperimenting {
     public static void main(String[] args) throws IOException {
         System.out.println("test");
-        test2 tst = new test2();
+        Stats tst = new Stats();
         String name = tst.getName();
         String url = "https://bulbapedia.bulbagarden.net/wiki/" + name + "_(Pok%C3%A9mon)";
         String desc = null;
@@ -39,7 +39,7 @@ public class jsoupExperimenting {
 
             for (Element e : elements) {
                 test.add(e.text());
-                
+
             }
 
 

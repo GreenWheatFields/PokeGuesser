@@ -1,24 +1,26 @@
 TODO LIST;
 
 [x] fix bug where the main class isn't recognized
-[ ] get and assign applicable variables from JSON data
+[x] get and assign applicable variables from JSON data // still need generation data, and color // pokeAPI doesnt have color
 [x] fix big where pokemon with a single type cannot be checked for a second type without nullpointer
 [x] Add dialogue to testConn method. Also add response to an HTTP response of 0;
 [x] Add method to disconnect connection, maybe this will make it easier to get random pokemon. either way, the way a connection is opened will need to be optimized.
 [x] figure out how to get a random pokemon whenever i need a new pokemon. I think i can do it by adding randomePoke and pokeURL to their own method and calling it. not sure, will focus on the basic first
 [x] create introductory dialogue for the game.
-[ ] rename classes // general cleanup
+[x] rename classes // general cleanup
 [x] Parse JSON data for pokemon front/back sprites
-[ ] Finish cmd version
-[ ] Merge test classes into main class.
+[x] Merge test classes into main class.
+[x] Consistently get sprites urls from bulbapedia
+[x] figure out how to "find and replace" pokemons name from the scrapped bublapedia data
+[x] See if PokeAPI has 'generation first introduced'
 [ ] Learn how to make a GUI
 [ ] Learn how to download images linked in API and display them in the GUI
-[ ] get the article titles from Bublapedia as well as the body text
-[ ] Consistently get sprites urls from bulbapedia
-[x] figure out how to "find and replace" pokemons name from the scrapped bublapedia data
-[ ] See if PokeAPI has 'generation first introduced'
+[ ] Finish cmd version
+[ ] Handle problem pokemon and how they interact with bublbapedia
+[ ] Suppress deprecated warning
 /////////////////////////////////////////////////////////////////////////////
 KNOWN BUGS
 [ ]Unnecessarily checks https response every time a new Pokemon is generated
 [ ]"Pokemon" is inconsistent with the accented e.
 [ ] when user inputs 'reveal' it also shows that as an incorrect answer. not sure if i want that.
+[x] pokeAPI only has game indices up to #649, possible fix: all pokemon from 650 to 721 first appear in x and y 721 to 807 first appear in sun/moon

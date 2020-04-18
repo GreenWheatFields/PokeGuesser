@@ -1,62 +1,56 @@
 package com.company;
 
-import com.sun.jdi.Value;
-import javafx.application.Preloader;
-
 import java.io.IOException;
 import java.util.Scanner;
 
 public class MainDialogue {
 
     public static void runPokeGuesser() throws IOException {
-        Scanner userInput = new Scanner(System.in);
-        String name;
         int height;
         int weight;
         int id;
         int baseExp;
+        int correct = 0;
+        int one = 1;
+
+        String name;
         String type1;
         String type2;
         String firstLetter;
-        double heightInInches;
-        double weightInLbs;
         String type2Message;
         String guess;
-        int revealName;
-        String pokeDesc;
 
-        int correct = 0;
-        //intro();
+        double heightInInches;
+        double weightInLbs;
 
+        Scanner userInput = new Scanner(System.in);
 
-        var one = 1;
+        intro();
+
         while (one < 2){
+
             int tries = 0;
-            test2 tst = new test2();
-            jsoupExperimenting js = new jsoupExperimenting();
-            //tst.testConn();
+            Stats stats = new Stats();
+            stats.testConn(); //try this outside the loop. also addd a test for bublapedia
             System.out.println("Generating random pokemon...");
-            name = tst.getName();
-            height = tst.getHeight();
+            name = stats.getName();
+            height = stats.getHeight();
             heightInInches = (height * 3.93701);
-            weight = tst.getWeight();
+            weight = stats.getWeight();
             weightInLbs = (weight / 4.536);
-            id = tst.getID();
-            baseExp = tst.getBaseExperience();
-            type1 = tst.getType();
-            type2 = tst.getType2();
-            pokeDesc = js.getPokeDesc();
-            System.out.println(name + pokeDesc + "aaaaaaaaaaaa");
-
-
+            id = stats.getID();
+            baseExp = stats.getBaseExperience();
+            type1 = stats.getType();
+            type2 = stats.getType2();
+            firstLetter = String.valueOf(name.charAt(0));
             if (type2 == null){
                 type2 = "";
                 type2Message = "";
             }else{
                 type2Message = " and " + type2;
             }
-            firstLetter = String.valueOf(name.charAt(0));
-           /* System.out.println("This Pokémon's id number is " + id);
+
+            System.out.println("This Pokémon's id number is " + id);
             System.out.println("Their height in decimetres is " + height);
             System.out.printf("Which is "+ "%.2f", heightInInches);
             System.out.print(" inches.");
@@ -69,13 +63,12 @@ public class MainDialogue {
             System.out.println("This Pokemon is of type " + type1 + type2Message);
             System.out.println("And finally, the first letter of this Pokemon's name is " + firstLetter);
             System.out.println("Good luck, type your guess below. if at anytime you want to reveal the full name type 'reveal'");
-            tst = null;
+            stats = null;
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {
                 if (guess.equalsIgnoreCase("reveal")){
                     System.out.println(name);
                 }
-
                 tries++;
                 System.out.println("incorrect. Tries = " + tries);
                 guess = userInput.nextLine();
@@ -89,18 +82,8 @@ public class MainDialogue {
             if (replay.equalsIgnoreCase("Y")){
                 one--;
             }
-
-
-
-
             one++;
-
-*/
-           one++;
         }
-
-
-
     }
 
     public static void intro(){
