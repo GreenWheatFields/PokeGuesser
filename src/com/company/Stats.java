@@ -109,6 +109,7 @@ public class Stats {
         JsonObject firstTypeParent = types.get(0).getAsJsonObject();
         JsonObject firstType = firstTypeParent.getAsJsonObject("type");
         firstTypeName = firstType.get("name").getAsString();
+        firstTypeName = firstTypeName.substring(0,1).toUpperCase() + firstTypeName.substring(1);
         return firstTypeName;
     }
     public String getType2(){
@@ -118,6 +119,7 @@ public class Stats {
             JsonObject secondTypeParent = types2.get(1).getAsJsonObject();
             JsonObject secondType = secondTypeParent.getAsJsonObject("type");
             secondTypeName = secondType.get("name").getAsString();
+            secondTypeName = secondTypeName.substring(0,1).toUpperCase() + secondTypeName.substring(1);
         }else{
             secondTypeName = null;
         }
@@ -134,7 +136,6 @@ public class Stats {
                firstGens = "Sun/Moon";
             }
         }else if (length >= 0) {
-            System.out.println(length);
 
             JsonObject gameIndexParent = gameIndex.get(length).getAsJsonObject();
             JsonObject firstGenParent = gameIndexParent.getAsJsonObject("version");
@@ -142,7 +143,7 @@ public class Stats {
             JsonObject gameIndexParent2 = gameIndex.get(length - 1).getAsJsonObject();
             JsonObject secondGenParent = gameIndexParent2.getAsJsonObject("version");
             String secondGen = secondGenParent.getAsJsonPrimitive("name").getAsString();
-            firstGens = firstGen.substring(0,1).toUpperCase() + firstGen.substring(1) + "/" + secondGen.substring(0,1).toUpperCase() + secondGen.substring(1);
+            firstGens = firstGen.substring(0,1).toUpperCase() + firstGen.substring(1) + " and " + secondGen.substring(0,1).toUpperCase() + secondGen.substring(1);
         }
         return firstGens;
     }

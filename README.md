@@ -2,20 +2,13 @@
 
 A Pokemon guessing game built on PokeAPI.
 
-This is my first Java project, it came from me messing around with API'S.
-Uses Google's gson to parse API data
+This is my first real Java project, it came from me messing around with API'S.
+
+Uses Google's gson to parse API data and jsoup to scrap wiki data
 
 
-Roadmap
+Right now the game is a cmd game, I will learn how to build a GUI to make it better
 
+Currently I am working on getting an abundance of features into the cmd version, so the GUI will be easier to create.
 
-[ ] Get the backend stable and consistent. 
-
-
-[ ] Learn to create a GUI to display the actual game (Will be a cmd game first, then GUI)
-
-
-[ ] Learn how to import list of all pokemon for use as typo suggestion.
-
-
-[ ] Learn a language that handles http request and json data better than Java.
+To play, just run the jar from your cmd.
