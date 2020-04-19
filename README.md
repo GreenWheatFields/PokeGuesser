@@ -1,6 +1,6 @@
 # PokeGuesser
 
-A Pokemon guessing game built on PokeAPI.
+A Pokemon guessing game built on PokeAPI and Bulbapedia.
 
 This is my first real Java project, it came from me messing around with API'S.
 
