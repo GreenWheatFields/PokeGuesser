@@ -189,6 +189,8 @@ public class Stats {
     public String getDetailedSprite() throws IOException {
         String urlPlaceholder;
         name = rootobj.get("name").getAsString();
+        checkName ck = new checkName();
+        name = ck.checkName(name);
         String url2 = "https://bulbapedia.bulbagarden.net/wiki/" + name + "_(Pok%C3%A9mon)";
         Document doc = Jsoup.connect(url2).userAgent("Mozilla/5.0").get();
         String selector2 = "#mw-content-text > table:nth-child(2) > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > a > img";

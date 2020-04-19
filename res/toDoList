@@ -20,6 +20,7 @@ TODO LIST;
 [ ] Suppress deprecated warning
 [ ] typo detection, game modes, timer
 [ ] change x/y in firstGens to x and y
+[ ] make random pokemon non-repeating
 /////////////////////////////////////////////////////////////////////////////
 KNOWN BUGS
 [ ]Unnecessarily checks https response every time a new Pokemon is generated
@@ -28,3 +29,26 @@ KNOWN BUGS
 [ ] hitting enter without typing anything results in an incorrect guess.
 [x] pokeAPI only has game indices up to #649, possible fix: all pokemon from 650 to 721 first appear in x and y 721 to 807 first appear in sun/moon
 [ ] pokemon above 649 do not have all sprites on pokeAPI. only  front, although some pokemon around #800 have neither, could use https://pokemondb.net/sprites for those
+//////////////////////////////
+MODES
+EASY
+detailed sprite
+id
+height/weight
+long desc
+reveal key doesn't affect score
+types
+first letter
+first gens
+MEDIUM
+in game sprite
+medium length desc showing evolutions
+reveal key affects score
+first gens
+HARDS
+minimal length desc
+blacked out sprite // idk how
+first gens
+
+
+
