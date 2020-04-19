@@ -67,7 +67,10 @@ public class MainDialogue {
             System.out.println("First Appearance: " + firstGens);
             System.out.println("Type: " + type1 + type2Message);
             System.out.println("First Letter: " + firstLetter);
-
+            System.out.print("Height: ");
+            System.out.printf("%.2f", heightInInches);
+            System.out.print(" inches");
+            System.out.println("");
             System.out.print("Weight: ");
             System.out.printf("%.2f", weightInLbs);
             System.out.print(" pounds");
