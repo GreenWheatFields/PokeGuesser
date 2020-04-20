@@ -99,7 +99,7 @@ public class MainDialogue {
             type1 = stats.getType();
             type2 = stats.getType2();
             firstLetter = String.valueOf(name.charAt(0)).toUpperCase();
-            pokeDesc = stats.getPokeDesc();
+            pokeDesc = stats.getPokeDesc(8);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
             backSprite = stats.getBackSprite();
@@ -161,7 +161,7 @@ public class MainDialogue {
             type1 = stats.getType();
             type2 = stats.getType2();
             firstLetter = String.valueOf(name.charAt(0)).toUpperCase();
-            pokeDesc = stats.getPokeDesc();
+            pokeDesc = stats.getPokeDesc(4);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
             backSprite = stats.getBackSprite();
@@ -222,7 +222,7 @@ public class MainDialogue {
             type1 = stats.getType();
             type2 = stats.getType2();
             firstLetter = String.valueOf(name.charAt(0)).toUpperCase();
-            pokeDesc = stats.getPokeDesc();
+            pokeDesc = stats.getPokeDesc(3);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
             backSprite = stats.getBackSprite();
@@ -235,7 +235,7 @@ public class MainDialogue {
                 type2Message = " and " + type2;
             }
             String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType:" + type1 + type2Message) +
-                    ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
+                    ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
                     + ("\nFront: " + frontSprite) + ("\nBack: " + backSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
@@ -278,7 +278,7 @@ public class MainDialogue {
                 + ("\nFor now, you will choose from the original 151 Pokémon.\n")
                 + ("\nIn future versions you will be able to choose to include or exclude whatever generation of Pokémon you want.\n")
                 +("\nThis game has three modes, Easy, Medium, and Hard\n")
-                +("\nEasy Mode will show everything available about a Pokemon, including a detailed picture, you can type 'reveal' to reveal the Pokemon with no consequence\n")
+                +("\nEasy Mode will show everything available about a Pokemon, including a detailed picture, you can type 'reveal' but only the reveal the first letter\n")//maybe have each 'reveal' reveal another letter of the pokemons name
                 +("\nMedium Mode has less data than Easy. The picture shown in Medium mode is an in game pixelated sprite, you can still type 'reveal', but it will count toward your tries\n")
                 + ("\nHard Mode is for people with extensive knowledge, You will have minimal information and you wont be able to reveal the Pokemon or see a picture\n")
                 + ("\n To play, type your mode 'Easy', 'Medium', or 'Hard'  and press Enter, allow a moment for pokemon to load."));

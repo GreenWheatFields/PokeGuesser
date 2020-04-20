@@ -161,7 +161,8 @@ public class Stats {
         backSprite = sprite1.get("back_default").getAsString();
         return backSprite;
     }
-    public String getPokeDesc() throws IOException {
+    public String getPokeDesc(int parseLength) throws IOException {
+
         checkName ck = new checkName();
         name = rootobj.get("name").getAsString();
         name = ck.checkName(name);
@@ -171,7 +172,7 @@ public class Stats {
 
         while (one < 2) {
             parseText++;
-            if (parseText > 8){  // parseText > x , x will most likely need to be a variable that changed with selected difficulty  //3 only gets the absoloute first line, 4 is evolutions, 7 is where more infomration comes in, but its not consisitent
+            if (parseText > parseLength){  // parseText > x , x will most likely need to be a variable that changed with selected difficulty  //3 only gets the absoloute first line, 4 is evolutions, 7 is where more infomration comes in, but its not consisitent
                 break;
             }
             String url2 = "https://bulbapedia.bulbagarden.net/wiki/" + name + "_(Pok%C3%A9mon)";
