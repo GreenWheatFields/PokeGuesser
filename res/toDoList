@@ -21,6 +21,7 @@ TODO LIST;
 [ ] typo detection, game modes, timer
 [ ] change x/y in firstGens to x and y
 [ ] make random pokemon non-repeating
+[ ] remove back sprites, as they are inconsistent in PokeAPI, and not as useful as front sprites
 /////////////////////////////////////////////////////////////////////////////
 KNOWN BUGS
 [ ]Unnecessarily checks https response every time a new Pokemon is generated
@@ -50,6 +51,7 @@ HARDS
 minimal length desc
 blacked out sprite // idk how
 first gens
+'reveal' reveals front sprite
 
 
 

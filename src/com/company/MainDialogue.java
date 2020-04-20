@@ -102,7 +102,6 @@ public class MainDialogue {
             pokeDesc = stats.getPokeDesc(8);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
-            backSprite = stats.getBackSprite();
             firstGens = stats.getFirstGens();
 
             if (type2 == null){
@@ -114,7 +113,7 @@ public class MainDialogue {
             String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType:" + type1 + type2Message) +
                     ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
-                    + ("\nFront: " + frontSprite) + ("\nBack: " + backSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
+                    + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
             stats = null;
             guess = userInput.nextLine();
@@ -164,7 +163,6 @@ public class MainDialogue {
             pokeDesc = stats.getPokeDesc(4);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
-            backSprite = stats.getBackSprite();
             firstGens = stats.getFirstGens();
 
             if (type2 == null){
@@ -173,16 +171,16 @@ public class MainDialogue {
             }else{
                 type2Message = " and " + type2;
             }
-            String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType:" + type1 + type2Message) +
-                    ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
+            String message = (("ID number: " + id) + ("\nFirst Appearance: " + firstGens) + ("\nType:" + type1 + type2Message) +
+                    ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
-                    + ("\nFront: " + frontSprite) + ("\nBack: " + backSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
+                    + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the first letter type 'reveal'"));
             System.out.println(message);
             stats = null;
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)){
                 if (guess.equalsIgnoreCase("reveal")){
-                    System.out.println(name);
+                    System.out.println(firstLetter);
                 }
                 tries++;
                 System.out.println("Incorrect. Tries: " + tries);
@@ -225,7 +223,6 @@ public class MainDialogue {
             pokeDesc = stats.getPokeDesc(3);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
-            backSprite = stats.getBackSprite();
             firstGens = stats.getFirstGens();
 
             if (type2 == null){
@@ -237,7 +234,7 @@ public class MainDialogue {
             String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType:" + type1 + type2Message) +
                     ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
-                    + ("\nFront: " + frontSprite) + ("\nBack: " + backSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
+                    + ("\nFront: " + frontSprite)+ ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
             stats = null;
             guess = userInput.nextLine();
