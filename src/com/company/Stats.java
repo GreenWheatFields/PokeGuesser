@@ -33,7 +33,7 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/1" ;//+ randomPoke;
     String pokeDesc = null;
     String detailedSprite = null;
     String firstGens;

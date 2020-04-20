@@ -110,7 +110,7 @@ public class MainDialogue {
             }else{
                 type2Message = " and " + type2;
             }
-            String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType:" + type1 + type2Message) +
+            String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType: " + type1 + type2Message) +
                     ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
                     + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
@@ -170,9 +170,9 @@ public class MainDialogue {
             }else{
                 type2Message = " and " + type2;
             }
-            String message = (("ID number: " + id) + ("\nFirst Appearance: " + firstGens) + ("\nType:" + type1 + type2Message) +
+            String message = (("ID number: " + id) + ("\nFirst Appearance: " + firstGens) + ("\nType: " + type1 + type2Message) +
                     ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
-                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
+                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprite")
                     + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the first letter type 'reveal'"));
             System.out.println(message);
             guess = userInput.nextLine();
@@ -219,9 +219,12 @@ public class MainDialogue {
             type2 = stats.getType2();
             firstLetter = String.valueOf(name.charAt(0)).toUpperCase();
             pokeDesc = stats.getPokeDesc(3);
+            String longerDesc = stats.getPokeDesc(5);
             detailedSprite = stats.getDetailedSprite();
             frontSprite = stats.getFrontSprite();
             firstGens = stats.getFirstGens();
+            int reveals = 0;
+            int hints = 0;
 
             if (type2 == null){
                 type2 = "";
@@ -229,23 +232,57 @@ public class MainDialogue {
             }else{
                 type2Message = " and " + type2;
             }
-            String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType:" + type1 + type2Message) +
-                    ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
-                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
-                    + ("\nFront: " + frontSprite)+ ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
+            String message = (("ID number: " + id) + ("\nType: " + type1 + type2Message) +
+                    ("\nWeight: " + df2.format(weightInLbs) + " pounds")
+                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") //blacked out detailed picture
+                    + ("\nType your guess below. \nTo reveal a random stat type 'reveal'"));//i only want reveal to be able to be pressed a certain amount of times
             System.out.println(message);
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {
-                if (guess.equalsIgnoreCase("reveal")){
-                    System.out.println(name);
+                if (guess.equalsIgnoreCase("reveal") && reveals <= 3){
+                    switch (reveals){
+                        case 0:
+                            tries++;
+                            System.out.println("Tries: " + tries);
+                            System.out.println("First Letter: " + firstLetter);
+                            reveals ++;
+                            hints++;
+                            guess = userInput.nextLine();
+                            break;
+                        case 1:
+                            tries++;
+                            System.out.println("Tries: " + tries);
+                            System.out.println("Base Experience: " + baseExp);
+                            reveals++;
+                            hints++;
+                            guess = userInput.nextLine();
+
+                            break;
+                        case 2:
+                            tries++;
+                            System.out.println("Tries: " + tries);
+                            System.out.println("Longer description " +  longerDesc);
+                            reveals++;
+                            hints++;
+                            guess = userInput.nextLine();
+                            break;
+                        default:
+                            reveals = 3;
+                            System.out.println("You are out of hints");
+                            guess = userInput.nextLine();
+
+                            break;
+                    }
                 }
-                tries++;
-                System.out.println("Incorrect. Tries: " + tries);
-                guess = userInput.nextLine();
+                if (!guess.equalsIgnoreCase(name) && !guess.equalsIgnoreCase("reveal")){
+                    tries++;
+                    System.out.println("Incorrect. Tries: " + tries);
+                    guess = userInput.nextLine();
+                }
             }
             if (guess.equalsIgnoreCase(name)){
                 correct++;
-                System.out.println("Correct, it took you " + tries + " tries. You have guessed " + correct + " so far.");
+                System.out.println("Correct, it took you " + tries + " tries and " + hints +  " hints. You have guessed " + correct + " so far.");
             }
             System.out.println("Get another Pokemon? Y/N");
             String replay = userInput.nextLine();
