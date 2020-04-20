@@ -115,7 +115,6 @@ public class MainDialogue {
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
                     + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
-            stats = null;
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {
                 if (guess.equalsIgnoreCase("reveal")){
@@ -176,7 +175,6 @@ public class MainDialogue {
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
                     + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the first letter type 'reveal'"));
             System.out.println(message);
-            stats = null;
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)){
                 if (guess.equalsIgnoreCase("reveal")){
@@ -236,7 +234,6 @@ public class MainDialogue {
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")
                     + ("\nFront: " + frontSprite)+ ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
-            stats = null;
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {
                 if (guess.equalsIgnoreCase("reveal")){
