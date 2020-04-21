@@ -12,14 +12,20 @@ import java.io.InputStreamReader;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Stats {
     public Stats() throws IOException {}
     public int randomPoke;
-    public int test(int z){
-        z = 1;
+    public int test(int randomPoke){
+        Scanner userInput = new Scanner(System.in);
+        int bound2 = 0;
+       String z = userInput.nextLine();
+        if (z.equalsIgnoreCase("WOW")){
+            bound2 = 2;
+        }
         Random random = new Random();
-        int randomPoke = random.nextInt(151) + 1;
+        randomPoke = random.nextInt(bound2) + 1;
         return randomPoke;
     }
 
