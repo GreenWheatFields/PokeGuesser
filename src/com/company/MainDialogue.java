@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class MainDialogue {
+public class MainDialogue{
     int height;
     int weight;
     int id;
@@ -114,8 +114,8 @@ public class MainDialogue {
             }
             String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType: " + type1 + type2Message) +
                     ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
-                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nIn game sprites")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
-                    + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
+                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nDetailed Sprite: ")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
+                    + detailedSprite + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {

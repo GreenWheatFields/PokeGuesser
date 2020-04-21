@@ -17,7 +17,6 @@ TODO LIST;
 [ ] Learn how to download images linked in API and display them in the GUI
 [ ] Finish cmd version
 [x] Handle problem pokemon and how they interact with bublbapedia
-[ ] Suppress deprecated warning
 [ ] typo detection, game modes, timer
 [x] change x/y in firstGens to x and y
 [ ] make random pokemon non-repeating

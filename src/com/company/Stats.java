@@ -15,8 +15,15 @@ import java.util.Random;
 
 public class Stats {
     public Stats() throws IOException {}
-    Random random = new Random();
-    int randomPoke = random.nextInt(151) + 1;
+    public int randomPoke;
+    public int test(int z){
+        z = 1;
+        Random random = new Random();
+        int randomPoke = random.nextInt(151) + 1;
+        return randomPoke;
+    }
+
+
     int one = 1;
     int parseText = 2;
     int responseCode;
@@ -33,7 +40,7 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + randomPoke;
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + test(1);
     String pokeDesc = null;
     String detailedSprite = null;
     String firstGens;
