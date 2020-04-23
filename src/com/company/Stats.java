@@ -17,17 +17,7 @@ import java.util.Scanner;
 public class Stats {
     public Stats() throws IOException {}
     public int randomPoke;
-    public int test(int randomPoke){
-        Scanner userInput = new Scanner(System.in);
-        int bound2 = 0;
-       String z = userInput.nextLine();
-        if (z.equalsIgnoreCase("WOW")){
-            bound2 = 2;
-        }
-        Random random = new Random();
-        randomPoke = random.nextInt(bound2) + 1;
-        return randomPoke;
-    }
+
 
 
     int one = 1;
@@ -38,7 +28,6 @@ public class Stats {
     int weight;
     int baseExperience;
 
-
     String firstTypeName;
     String secondTypeName;
     String frontSprite;
@@ -46,7 +35,7 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + test(1);
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + GenerationSelect.test();
     String pokeDesc = null;
     String detailedSprite = null;
     String firstGens;
