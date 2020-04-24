@@ -10,7 +10,7 @@ public class GenerationSelect {
     public static Scanner userInput = new Scanner(System.in);
     private static int size;
 
-    public static int test(){
+    public static int getRandomPoke(){
         System.out.println("Select Generation:\n" + "1-7\n" + "EX: 'Gen 4'");
         String z = userInput.nextLine().toLowerCase();
 
@@ -49,18 +49,11 @@ public class GenerationSelect {
         size = upperBound - lowerBound +1;
         return randomPoke;
     }
-    public static int getRandomPoke(){
 
+    public static int[] getSize(){
+        int[] count = new int[size];
+        //System.out.println(count.length);
+        return count;
+    }
 
-        return test();
-    }
-    public static int getSize(){
-        System.out.println(size);
-        return size;
-    }
-    public static int[] totalGuessed(int size){
-        int[]a = new int[size];
-        System.out.println(a.length);
-        return a;
-    }
 }

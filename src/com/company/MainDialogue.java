@@ -105,6 +105,7 @@ public class MainDialogue{
             firstGens = stats.getFirstGens();
             int reveals = 0;
             int hints = 0;
+            System.out.println(stats.lulw.length);
 
             if (type2 == null){
                 type2 = "";
