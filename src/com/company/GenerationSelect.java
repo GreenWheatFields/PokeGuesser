@@ -4,14 +4,16 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GenerationSelect {
-    public static int upperBound = 0;
-    public static int  lowerBound = 0;
+    private static int upperBound;
+    private static int  lowerBound;
+    public static int randomPoke;
+    public static Scanner userInput = new Scanner(System.in);
+    private static int size;
+
     public static int test(){
         System.out.println("Select Generation:\n" + "1-7\n" + "EX: 'Gen 4'");
-        int randomPoke;
-        Scanner userInput = new Scanner(System.in);
-
         String z = userInput.nextLine().toLowerCase();
+
 
         switch (z){
             case "gen 1":
@@ -44,12 +46,21 @@ public class GenerationSelect {
                 break;
         }
         randomPoke = ThreadLocalRandom.current().nextInt(lowerBound, upperBound);
+        size = upperBound - lowerBound +1;
         return randomPoke;
     }
+    public static int getRandomPoke(){
 
 
-    public static int[] totalGuessed(){
-        int[]a = new int[1];
+        return test();
+    }
+    public static int getSize(){
+        System.out.println(size);
+        return size;
+    }
+    public static int[] totalGuessed(int size){
+        int[]a = new int[size];
+        System.out.println(a.length);
         return a;
     }
 }

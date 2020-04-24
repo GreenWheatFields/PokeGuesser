@@ -35,7 +35,9 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + GenerationSelect.test();
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + GenerationSelect.getRandomPoke();
+    int lulw = GenerationSelect.getSize();
+
     String pokeDesc = null;
     String detailedSprite = null;
     String firstGens;
