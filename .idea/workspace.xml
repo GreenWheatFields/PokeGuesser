@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="PokeGuesser:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e41074f4-9d79-4ac2-b0cb-73df72ac74a9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/PokeGuesser.jar" beforeDir="false" afterPath="$PROJECT_DIR$/PokeGuesser.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GenerationSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GenerationSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/MainDialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainDialogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Stats.java" afterDir="false" />
+    </list>
+    <list id="54ca54c7-206f-4ed7-9f2f-1ac7632b0dd4" name="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;" comment="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;&#10;&#10;This reverts commit 7f98ae56">
+      <change beforePath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/jsoupExperimenting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/placeholder.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="2bba3bec109c6023bbf5d006c39b9a0d8cd3adb9" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\learnincode\PokeGuesser\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aHdxPVxy84DgZ2C0M5w0Y6DUZF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="PokeGuesser" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="PokeGuesser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="PokeGuesser" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jsoupExperimenting" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.company.jsoupExperimenting" />
+      <module name="PokeGuesser" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main1" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.jsoupExperimenting" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e41074f4-9d79-4ac2-b0cb-73df72ac74a9" name="Default Changelist" comment="" />
+      <created>1586396698721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586396698721</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1586667614328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586667614328</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1586669959760</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586669959760</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added todo list">
+      <created>1586671117158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586671117158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="working on cleaning everything up. I want the main method to be incredibly clean.">
+      <created>1586722401866</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586722401866</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update to do list, added height and id variables to the main method.">
+      <created>1586723671360</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586723671360</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed bug where JSON data would automatically be parsed for a second pokemon type even if it didn't exist resulting in an error.">
+      <created>1586737139811</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586737139811</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated todo list">
+      <created>1586737690697</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586737690697</updated>
+    </task>
+    <task id="LOCAL-00009" summary="removed old comments">
+      <created>1586737787180</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586737787180</updated>
+    </task>
+    <task id="LOCAL-00010" summary="making progress on getting random URL">
+      <created>1586799522953</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1586799522953</updated>
+    </task>
+    <task id="LOCAL-00011" summary="trying to fix issues with random URLs">
+      <created>1586800821758</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1586800821758</updated>
+    </task>
+    <task id="LOCAL-00012" summary="random URLS are now consistent. I see an ungodly amount of loops in my future.">
+      <created>1586801713291</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1586801713291</updated>
+    </task>
+    <task id="LOCAL-00013" summary="laying out blueprint for opening dialogue">
+      <created>1586803104687</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1586803104687</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added opening dialogue, response to a https response of 0.">
+      <created>1586890316211</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586890316211</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated toDoList">
+      <created>1586890546550</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1586890546550</updated>
+    </task>
+    <task id="LOCAL-00016" summary="PokeGuesser 0.1. mvp finished multiple QOL bugs that will be added to toDoList, but it is playable">
+      <created>1586927113904</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586927113904</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added known bugs to toDoList. Added break between opening dialogue and pokemon stats.&#10;added 'reveal' key to reveal Pokemon">
+      <created>1586928503832</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1586928503832</updated>
+    </task>
+    <task id="LOCAL-00018" summary="changed version # in into method">
+      <created>1586928816343</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586928816343</updated>
+    </task>
+    <task id="LOCAL-00019" summary="beginning phases of bulbapedia scraper.">
+      <created>1586974794225</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586974794225</updated>
+    </task>
+    <task id="LOCAL-00020" summary="marked potential problem pokemon in regards to scraping bulbopedia">
+      <created>1586977943527</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586977943527</updated>
+    </task>
+    <task id="LOCAL-00021" summary="scraper now gets defined amount of line from bulbapedia instead of the entire article">
+      <created>1587063515021</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1587063515021</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update toDoList&#10;added (unfinished) methods to get front and back URLs from PokeAPI">
+      <created>1587064370786</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1587064370786</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Finally parsed front/back sprite urls&#10;Replaced pokemons name with '_____' in the description from bulbapedia&#10;updated toDoList&#10;added skeleton for parsing sprite urls from bulbapedia.">
+      <created>1587100986827</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1587100986827</updated>
+    </task>
+    <task id="LOCAL-00024" summary="can now parse bulbapedia for thumbnail images.&#10;added meloetta as a problem pokemon due to her aria form">
+      <created>1587147766109</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1587147766109</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added methods for description and sprites.&#10;broke everything, will fix tonight">
+      <created>1587149942111</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1587149942111</updated>
+    </task>
+    <task id="LOCAL-00026" summary="reverted changed, updated toDoList and knownBugs&#10;added placeholder class to test in;">
+      <created>1587151052401</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1587151052401</updated>
+    </task>
+    <task id="LOCAL-00027" summary="reverted some changes">
+      <created>1587151428863</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1587151428863</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Revert &quot;reverted some changes&quot;&#10;&#10;This reverts commit 0f70a779">
+      <created>1587151644971</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1587151644971</updated>
+    </task>
+    <task id="LOCAL-00029" summary="accidentally broke everything, reverted changes.">
+      <created>1587151791731</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1587151791731</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;&#10;This reverts commit 7f98ae56">
+      <created>1587152012469</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1587152012469</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added (working) classes for bulbapedia descriptions and the URL of the detailed pokemon images&#10;added bulbapedia to testConn method&#10;renamed/merged test class into main class&#10;added method to get the first two games a pokemon appeared in. &#10;update toDoList&#10;general code cleanup/removing comments">
+      <created>1587183277595</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1587183277595</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added switch statement to handle pokemon whos name on PokeAPI cannot be added to a bulbapedia URL without error.&#10;working on bug that comes from the new switch statement. bulbapedia content can't be parsed for the &quot;name&quot; variable anymore as the name has been changed to match the url, not the content. introduced method getParseKey to try and fix&#10;&#10;update toDoList">
+      <created>1587233371165</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1587233371165</updated>
+    </task>
+    <task id="LOCAL-00033" summary="version 0.2&#10;cleaned up dialouge a bit, getParseKey method and parseKey variable working&#10;addedthe ne variables to the main dialouge">
+      <created>1587249426368</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1587249426368</updated>
+    </task>
+    <task id="LOCAL-00034" summary="version 0.2&#10;cleaned up dialogue a bit, getParseKey method and parseKey variable working&#10;added the ne variables to the main dialogue&#10;removed height in decimeters / weight in hectograms and just left metric&#10;added jar file&#10;removed base experience stat from displaying&#10;update README.md&#10;update toDoList&#10;made main dialogue less friendly&#10;removed unnecessary files, folders and classes">
+      <created>1587257079798</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1587257079798</updated>
+    </task>
+    <task id="LOCAL-00035" summary="version 0.2.1 &#10;renamed jar file">
+      <created>1587257314868</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1587257314868</updated>
+    </task>
+    <task id="LOCAL-00036" summary="accidentally cut out height in inches from pokemon stats, back now.">
+      <created>1587257546041</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1587257546041</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update toDoList">
+      <created>1587259260912</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1587259260912</updated>
+    </task>
+    <task id="LOCAL-00038" summary="added checkname method to getDetailedSprite method&#10;using a more efficient way to display decimals (DecimalFormat)&#10;continued to make the dialogue less friendly&#10;added game modes, easy,medium, hard. Added methods for each mode&#10;changed into dialogue&#10;added String &quot;message&quot; instead of multiple sysout messages for each mode&#10;updateToDoList">
+      <created>1587332910440</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1587332910441</updated>
+    </task>
+    <task id="LOCAL-00039" summary="added parameter to getPokeDesc method, int parseLength, that determines the lines of  html data to be parsed. 8 for easy, 4 for medium, 3 for hard">
+      <created>1587402918033</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1587402918033</updated>
+    </task>
+    <task id="LOCAL-00040" summary="removed back sprite variable, they are inconsistent in PokeAPI and not as useful. I left the method in in case i want to use them for Hard Mode">
+      <created>1587403311968</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1587403311968</updated>
+    </task>
+    <task id="LOCAL-00041" summary="removed useless line from each mode setting the Stats object to null;">
+      <created>1587403514795</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1587403514796</updated>
+    </task>
+    <task id="LOCAL-00042" summary="working on refining modes, added switch statement to hard mode that handles the way hints are given, will add a variation of this to each mode">
+      <created>1587405924842</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1587405924842</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update toDoList">
+      <created>1587406260275</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1587406260275</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added recursion to each Mode for use as a 'reset' button&#10; added more options for after a correct guess&#10; refined all modes&#10;update toDoList">
+      <created>1587491175559</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1587491175559</updated>
+    </task>
+    <task id="LOCAL-00045" summary="beginning progress on generation select">
+      <created>1587493757888</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1587493757888</updated>
+    </task>
+    <task id="LOCAL-00046" summary="further progress, will refine later tonight.">
+      <created>1587493972301</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1587493972301</updated>
+    </task>
+    <task id="LOCAL-00047" summary="expanded on functions to select generations. still far from perfect">
+      <created>1587614229542</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1587614229542</updated>
+    </task>
+    <task id="LOCAL-00048" summary="added rudimentary generation select method, will most likely need to be rewritten to include the selection of multiple generations, but it works.&#10;&#10;substituted Random class for ThreadLocalRandom">
+      <created>1587708774802</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1587708774802</updated>
+    </task>
+    <task id="LOCAL-00049" summary="slow/steady progress on optimizing GenerationSelect class">
+      <created>1587756359555</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1587756359555</updated>
+    </task>
+    <task id="LOCAL-00050" summary="can now use user input to select generation, still a lot to do to prevent duplicate pokemon">
+      <created>1587757005035</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1587757005036</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revert &quot;reverted some changes&quot;&#10;&#10;This reverts commit 0f70a779" />
+    <MESSAGE value="accidentally broke everything, reverted changes." />
+    <MESSAGE value="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;&#10;&#10;This reverts commit 7f98ae56" />
+    <MESSAGE value="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;&#10;This reverts commit 7f98ae56" />
+    <MESSAGE value="added (working) classes for bulbapedia descriptions and the URL of the detailed pokemon images&#10;added bulbapedia to testConn method&#10;renamed/merged test class into main class&#10;added method to get the first two games a pokemon appeared in. &#10;update toDoList&#10;general code cleanup/removing comments" />
+    <MESSAGE value="added switch statement to handle pokemon whos name on PokeAPI cannot be added to a bulbapedia URL without error.&#10;working on bug that comes from the new switch statement. bulbapedia content can't be parsed for the &quot;name&quot; variable anymore as the name has been changed to match the url, not the content. introduced method getParseKey to try and fix&#10;&#10;update toDoList" />
+    <MESSAGE value="version 0.2&#10;cleaned up dialouge a bit, getParseKey method and parseKey variable working&#10;addedthe ne variables to the main dialouge" />
+    <MESSAGE value="version 0.2&#10;cleaned up dialogue a bit, getParseKey method and parseKey variable working&#10;added the ne variables to the main dialogue&#10;removed height in decimeters / weight in hectograms and just left metric&#10;added jar file&#10;removed base experience stat from displaying&#10;update README.md&#10;update toDoList&#10;made main dialogue less friendly&#10;removed unnecessary files, folders and classes" />
+    <MESSAGE value="version 0.2.1 &#10;renamed jar file" />
+    <MESSAGE value="accidentally cut out height in inches from pokemon stats, back now." />
+    <MESSAGE value="added checkname method to getDetailedSprite method&#10;using a more efficient way to display decimals (DecimalFormat)&#10;continued to make the dialogue less friendly&#10;added game modes, easy,medium, hard. Added methods for each mode&#10;changed into dialogue&#10;added String &quot;message&quot; instead of multiple sysout messages for each mode&#10;updateToDoList" />
+    <MESSAGE value="added parameter to getPokeDesc method, int parseLength, that determines the lines of  html data to be parsed. 8 for easy, 4 for medium, 3 for hard" />
+    <MESSAGE value="removed back sprite variable, they are inconsistent in PokeAPI and not as useful. I left the method in just in case i want to use them for Hard Mode" />
+    <MESSAGE value="removed back sprite variable, they are inconsistent in PokeAPI and not as useful. I left the method in in case i want to use them for Hard Mode" />
+    <MESSAGE value="removed useless line from each mode setting the Stats object to null;" />
+    <MESSAGE value="working on refining modes, added switch statement to hard mode that handles the way hints are given, will add a variation of this to each modes" />
+    <MESSAGE value="working on refining modes, added switch statement to hard mode that handles the way hints are given, will add a variation of this to each mode" />
+    <MESSAGE value="update toDoList" />
+    <MESSAGE value="added recursion to each Mode for use as a 'reset' button&#10; added more options for after a correct guess&#10; refined all modes&#10;update toDoList" />
+    <MESSAGE value="beginning progress on generation select" />
+    <MESSAGE value="further progress, will refine later tonight." />
+    <MESSAGE value="expanded on functions to select generations. still far from perfect" />
+    <MESSAGE value="added rudimentary generation select method, will most likely need to be rewritten to include the selection of multiple generations, but it works.&#10;&#10;substituted Random class for ThreadLocalRandom" />
+    <MESSAGE value="slow/steady progress on optimizing GenerationSelect class" />
+    <MESSAGE value="can now use user input to select generation, still a lot to do to prevent duplicate pokemon" />
+    <option name="LAST_COMMIT_MESSAGE" value="can now use user input to select generation, still a lot to do to prevent duplicate pokemon" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="485" y="71" key="#Main_(1)" timestamp="1586669732627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="71" key="#Main_(1)/0.0.1536.824@0.0.1536.824" timestamp="1586669732627" />
+    <state x="361" y="71" key="#Notifications" timestamp="1586929032171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1586929032171" />
+    <state x="301" y="150" width="1089" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587253310169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="301" y="150" width="1089" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587253310169" />
+    <state x="530" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586890104568">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="530" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586890104568" />
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586668081054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1586668081054" />
+    <state x="599" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1586456783877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="599" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1586456783877" />
+    <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586889512462">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1586889512462" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587254132802">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587254132802" />
+    <state x="179" y="0" key="CommitChangelistDialog2" timestamp="1587757004246">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="179" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587757004246" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1586669572179">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1586669572179" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586929292911">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586929292911" />
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1587787418605">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
+    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1587787418605">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
+    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1587787418605">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1587787418605">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1587100996024">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587100996024" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1587100996023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587100996023" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1587100996023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587100996023" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1587100996024">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587100996024" />
+    <state x="229" y="130" key="MergeDialog" timestamp="1587151907153">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="229" y="130" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1587151907153" />
+    <state x="563" y="198" key="MultipleFileMergeDialog" timestamp="1587151968086">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="563" y="198" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1587151968086" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1587254288434">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587254288434" />
+    <state x="618" y="328" key="VCS.ChangelistChooser" timestamp="1586668010466">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="328" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1586668010466" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587757007399">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587757007399" />
+    <state x="518" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1587150373444">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="518" y="146" key="VcsDiffUtil.ChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587150373444" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587254444082">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587254444082" />
+    <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586532836634">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1586532836634" />
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1587151678837">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1587151678837" />
+    <state x="209" y="33" key="new project wizard" timestamp="1587787039822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1587787039822" />
+    <state x="511" y="31" key="refactoring.ChangeSignatureDialog" timestamp="1587493561596">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="31" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1587493561596" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1587248492876">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587248492876" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587612519763">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587612519763" />
+  </component>
+</project>
