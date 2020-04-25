@@ -6,19 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e41074f4-9d79-4ac2-b0cb-73df72ac74a9" name="Default Changelist" comment="">
+    <list default="true" id="e41074f4-9d79-4ac2-b0cb-73df72ac74a9" name="Default Changelist" comment="doing pseudo unit test within medium mode. Added *working* generation select, and randomPoke is now generated from a once randomized array of all id numbers in a generation that advances linearly.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PokeGuesser.jar" beforeDir="false" afterPath="$PROJECT_DIR$/PokeGuesser.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GenerationSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GenerationSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/MainDialogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/MainDialogue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/Stats.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/Stats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/toDoList" beforeDir="false" afterPath="$PROJECT_DIR$/res/toDoList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GenerationSelect.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/MainDialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainDialogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Stats.java" afterDir="false" />
     </list>
-    <list id="54ca54c7-206f-4ed7-9f2f-1ac7632b0dd4" name="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;" comment="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;&#10;&#10;This reverts commit 7f98ae56">
-      <change beforePath="$PROJECT_DIR$/out/production/PokeGuesser/com/company/test2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/jsoupExperimenting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/placeholder.java" beforeDir="false" />
-    </list>
+    <list id="54ca54c7-206f-4ed7-9f2f-1ac7632b0dd4" name="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;" comment="Revert &quot;added methods for description and sprites. broke everything, will fix tonight&quot;&#10;&#10;This reverts commit 7f98ae56" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -554,10 +554,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587254132802" />
-    <state x="179" y="0" key="CommitChangelistDialog2" timestamp="1587757004246">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1587790611788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="179" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587757004246" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587790611788" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1586669572179">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -566,22 +566,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586929292911" />
-    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1587787418605">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1587790611817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
-    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1587787418605">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587790611817" />
+    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1587790611816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
-    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1587787418605">
+    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587790611816" />
+    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1587790611816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
-    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1587787418605">
+    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587790611816" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1587790611817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587787418605" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587790611817" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1587100996024">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -614,10 +614,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="328" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1586668010466" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587757007399">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587787800813">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587757007399" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587787800813" />
     <state x="518" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1587150373444">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -638,10 +638,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1587787039822" />
-    <state x="511" y="31" key="refactoring.ChangeSignatureDialog" timestamp="1587493561596">
+    <state x="511" y="31" key="refactoring.ChangeSignatureDialog" timestamp="1587789209169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="511" y="31" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1587493561596" />
+    <state x="511" y="31" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1587789209169" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587248492876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

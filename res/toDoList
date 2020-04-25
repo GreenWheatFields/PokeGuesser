@@ -19,11 +19,12 @@ TODO LIST;
 [x] Handle problem pokemon and how they interact with bublbapedia
 [ ] typo detection, game modes, timer
 [x] change x/y in firstGens to x and y
-[ ] make random pokemon non-repeating
+[x] make random pokemon non-repeating
 [x] remove back sprites, as they are inconsistent in PokeAPI, and not as useful as front sprites
-[ ] figure out how to pass through generation ranges into randomPoke variable
+[x] figure out how to pass through generation ranges into randomPoke variable
 [x] make 'name' upper case
 [ ] make a lot more variables public
+[ ]
 /////////////////////////////////////////////////////////////////////////////
 KNOWN BUGS
 [x]Unnecessarily checks https response every time a new Pokemon is generated

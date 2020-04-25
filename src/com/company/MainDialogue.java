@@ -1,9 +1,12 @@
 package com.company;
 
+import com.google.gson.JsonElement;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 import java.util.concurrent.ThreadLocalRandom;
@@ -22,6 +25,7 @@ public class MainDialogue{
     private static int  lowerBound;
     public static int randomPoke;
     private static int size;
+    private int totalShown = 1;
 
     String name;
     String type1;
@@ -42,15 +46,12 @@ public class MainDialogue{
     double weightInLbs;
 
     DecimalFormat df2 = new DecimalFormat("#.##");
-    Scanner userInput = new Scanner(System.in);
+   public static Scanner userInput = new Scanner(System.in);
 
 
 
     public void runPokeGuesser() throws IOException {
 
-        Stats stat = new Stats();
-        //stat.testConn();
-        stat = null;
         intro();
         mode = userInput.nextLine().toLowerCase();
         x = 1;
@@ -114,7 +115,6 @@ public class MainDialogue{
             firstGens = stats.getFirstGens();
             int reveals = 0;
             int hints = 0;
-            System.out.println(stats.lulw.length);
 
             if (type2 == null){
                 type2 = "";
@@ -176,8 +176,14 @@ public class MainDialogue{
 
         while (medium < 2){            // 2 , 4 , 6
             int tries = 0;
+            System.out.println("total shown" + totalShown);
+            int[] select = getRange();
+            System.out.println(select[totalShown]);
+            randomPoke = select[totalShown];
+            totalShown++;
             Stats stats = new Stats();
             System.out.println("Generating random pokemon on Medium Mode...");
+
             // int r = stats.randomPoke; randomPoke matches the id, does not return null. perhaps r could be added to an array, idk.
             name = stats.getName();
             name = name.substring(0,1).toUpperCase() + name.substring(1);
@@ -394,7 +400,7 @@ public class MainDialogue{
         }
     }
 
-    public int getRandomPoke(){
+    public static int[] getRange(){
         System.out.println("Select Generation:\n" + "1-7\n" + "EX: 'Gen 4'");
         String z = userInput.nextLine().toLowerCase();
 
@@ -435,10 +441,21 @@ public class MainDialogue{
             select[i - lowerBound] = i;
         }
         System.out.println(select[0]);
+        for (int i = select.length - 1; i > 0; i--)
+        {
+            Random rnd = new Random();
+            int index = rnd.nextInt(i + 1);
+            int a = select[index];
+            select[index] = select[i];
+            select[i] = a;
+        }
+        System.out.println(select[0]);
+
         //randomPoke = ThreadLocalRandom.current().nextInt(lowerBound, upperBound);
-        size = upperBound - lowerBound +1;//maybe fill the array within the boun
-        return randomPoke;
+        //size = upperBound - lowerBound +1;//maybe fill the array within the boun
+        return select;
     }
+
 
     public static void intro(){
         String introMessage = (("Welcome to PokeGuesser!\n") + ("\nPokeGuesser generates a random Pokémon id # then gets that Pokemon's data from PokeApi and Bulbapedia\n")

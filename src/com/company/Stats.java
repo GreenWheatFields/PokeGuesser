@@ -15,9 +15,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Stats {
-    public Stats() throws IOException {}
-    public int randomPoke;
 
+    public Stats ()throws IOException {
+
+    }
 
 
     int one = 1;
@@ -35,8 +36,7 @@ public class Stats {
     String name;
     String line;
     String badResponse = null;
-    String pokeURL = "https://pokeapi.co/api/v2/pokemon/1"; //+ GenerationSelect.getRandomPoke();
-    public int[] lulw = GenerationSelect.getSize();
+    String pokeURL = "https://pokeapi.co/api/v2/pokemon/" + MainDialogue.randomPoke;
 
     String pokeDesc = null;
     String detailedSprite = null;

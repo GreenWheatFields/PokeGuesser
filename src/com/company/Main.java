@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         MainDialogue main = new MainDialogue();
-        main.getRandomPoke();
-       Stats st = new Stats();
+        main.mediumMode(1);
+       //Stats st = new Stats();
        //System.out.println(st.getName());
 
     }
