@@ -4,13 +4,12 @@ import java.io.*;
 
 public class Main {
 
-
-
     public static void main(String[] args) throws IOException {
 
-        /*MainDialogue main = new MainDialogue();
-        main.runPokeGuesser();*/
+        MainDialogue main = new MainDialogue();
+        main.getRandomPoke();
        Stats st = new Stats();
-       System.out.println(st.getName());
+       //System.out.println(st.getName());
+
     }
 }

@@ -1,8 +1,12 @@
 package com.company;
 
+import org.junit.Test;
+
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MainDialogue{
     int height;
@@ -14,6 +18,10 @@ public class MainDialogue{
     int medium = 3;
     int hard = 3;
     int x;
+    private static int upperBound;
+    private static int  lowerBound;
+    public static int randomPoke;
+    private static int size;
 
     String name;
     String type1;
@@ -27,6 +35,7 @@ public class MainDialogue{
     //String backSprite;
     String firstGens;
     String mode;
+
 
 
     double heightInInches;
@@ -384,6 +393,53 @@ public class MainDialogue{
             hard++;
         }
     }
+
+    public int getRandomPoke(){
+        System.out.println("Select Generation:\n" + "1-7\n" + "EX: 'Gen 4'");
+        String z = userInput.nextLine().toLowerCase();
+
+
+        switch (z){
+            case "gen 1":
+                upperBound = 151;
+                lowerBound = 1;
+                break;
+            case "gen 2":
+                upperBound = 251;
+                lowerBound = 152;
+                break;
+            case "gen 3":
+                upperBound = 386;
+                lowerBound = 252;
+                break;
+            case "gen 4":
+                upperBound = 493;
+                lowerBound= 387;
+                break;
+            case "gen 5":
+                upperBound = 649;
+                lowerBound = 494;
+                break;
+            case "gen 6":
+                upperBound = 721;
+                lowerBound = 650;
+                break;
+            case "gen 7":
+                upperBound = 807;
+                lowerBound = 722;
+                break;
+        }
+
+        int[]select = new int[upperBound - lowerBound];
+        for (int i = lowerBound; i < upperBound; i++) {
+            select[i - lowerBound] = i;
+        }
+        System.out.println(select[0]);
+        //randomPoke = ThreadLocalRandom.current().nextInt(lowerBound, upperBound);
+        size = upperBound - lowerBound +1;//maybe fill the array within the boun
+        return randomPoke;
+    }
+
     public static void intro(){
         String introMessage = (("Welcome to PokeGuesser!\n") + ("\nPokeGuesser generates a random Pokémon id # then gets that Pokemon's data from PokeApi and Bulbapedia\n")
                 + ("\nFor now, you will choose from the original 151 Pokémon.\n")
@@ -398,3 +454,4 @@ public class MainDialogue{
 
     }
 }
+
