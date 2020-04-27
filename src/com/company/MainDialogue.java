@@ -25,7 +25,7 @@ public class MainDialogue{
     private static int  lowerBound;
     public static int randomPoke;
     private static int size;
-    private int totalShown = 1;
+    private int totalShown = -1;
 
     String name;
     String type1;
@@ -53,6 +53,8 @@ public class MainDialogue{
     public void runPokeGuesser() throws IOException {
 
         intro();
+        int[] select = getRange();
+        System.out.println("Now, select a mode: 'Easy' 'Medium' 'Hard");
         mode = userInput.nextLine().toLowerCase();
         x = 1;
         while (x != 2) {
@@ -65,7 +67,7 @@ public class MainDialogue{
                 case "medium":
                     x =2;
                     medium = 1;
-                    mediumMode(medium);
+                    mediumMode(medium,select);
                     break;
                 case "hard":
                     x =2;
@@ -77,7 +79,7 @@ public class MainDialogue{
                     mode = userInput.nextLine();
                     if (mode.equalsIgnoreCase("medium")){
                         medium = 1;
-                        mediumMode(medium);
+                        mediumMode(medium,select);
                     }else if (mode.equalsIgnoreCase("easy")){
                         easy =1;
                         easyMode(easy);
@@ -172,26 +174,34 @@ public class MainDialogue{
     }
 
 
-    public void mediumMode(int medium) throws IOException{
+    public void mediumMode(int medium, int[] select) throws IOException{
 
-        while (medium < 2){            // 2 , 4 , 6
+        while (medium < 2){
+
             int tries = 0;
-            System.out.println("total shown" + totalShown);
-            int[] select = getRange();
-            System.out.println(select[totalShown]);
-            randomPoke = select[totalShown];
+
+
+
             totalShown++;
+
+            if (totalShown >= select.length){
+                System.out.println("out of pokemon");
+                break;
+            }
+            randomPoke = select[totalShown];
+
+            System.out.println(upperBound +"lol" + lowerBound);
             Stats stats = new Stats();
             System.out.println("Generating random pokemon on Medium Mode...");
 
-            // int r = stats.randomPoke; randomPoke matches the id, does not return null. perhaps r could be added to an array, idk.
+            //all this below is redundant
             name = stats.getName();
             name = name.substring(0,1).toUpperCase() + name.substring(1);
             height = stats.getHeight();
             heightInInches = (height * 3.93701);
             weight = stats.getWeight();
             weightInLbs = (weight / 4.536);
-            id = stats.getID();
+            //id = stats.getID();
             baseExp = stats.getBaseExperience();
             type1 = stats.getType();
             type2 = stats.getType2();
@@ -217,7 +227,7 @@ public class MainDialogue{
             }else{
                 type2Message = " and " + type2;
             }
-            String message = (("ID number: " + id) + ("\nFirst Appearance: " + firstGens) + ("\nType: " + type1 + type2Message) +
+            String message = (("ID number: " + stats.getID()) + ("\nFirst Appearance: " + firstGens) + ("\nType: " + type1 + type2Message) +
                     ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
                     + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'") + ("\nIn game sprite")
                     + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal hints type 'reveal'. You have four hints"));
@@ -287,7 +297,7 @@ public class MainDialogue{
             if (replay.equalsIgnoreCase("Y")){
                 medium--;
             }else if(replay.equalsIgnoreCase("R")){
-                mediumMode(1);
+                mediumMode(1,select);
             }else if (replay.equalsIgnoreCase("A")){
                 runPokeGuesser();
             }
@@ -401,13 +411,13 @@ public class MainDialogue{
     }
 
     public static int[] getRange(){
-        System.out.println("Select Generation:\n" + "1-7\n" + "EX: 'Gen 4'");
+        System.out.println("First, select a Generation 1-7:\n" + "EX: 'Gen 4' or 'All'\n");
         String z = userInput.nextLine().toLowerCase();
 
 
         switch (z){
             case "gen 1":
-                upperBound = 151;
+                upperBound = 4;
                 lowerBound = 1;
                 break;
             case "gen 2":
@@ -440,7 +450,7 @@ public class MainDialogue{
         for (int i = lowerBound; i < upperBound; i++) {
             select[i - lowerBound] = i;
         }
-        System.out.println(select[0]);
+        //System.out.println(select[0]);
         for (int i = select.length - 1; i > 0; i--)
         {
             Random rnd = new Random();
@@ -449,7 +459,8 @@ public class MainDialogue{
             select[index] = select[i];
             select[i] = a;
         }
-        System.out.println(select[0]);
+        System.out.println(z.substring(0,1).toUpperCase() + z.substring(1) +  " selected.");
+        //System.out.println(select[0]);
 
         //randomPoke = ThreadLocalRandom.current().nextInt(lowerBound, upperBound);
         //size = upperBound - lowerBound +1;//maybe fill the array within the boun
@@ -465,7 +476,7 @@ public class MainDialogue{
                 +("\nEasy Mode will show everything available about a Pokemon, including a detailed picture, you can type 'reveal' but only the reveal the first letter\n")//maybe have each 'reveal' reveal another letter of the pokemons name
                 +("\nMedium Mode has less data than Easy. The picture shown in Medium mode is an in game pixelated sprite, you can still type 'reveal', but it will count toward your tries\n")
                 + ("\nHard Mode is for people with extensive knowledge, You will have minimal information and you wont be able to reveal the Pokemon or see a picture\n")
-                + ("\n To play, type your mode 'Easy', 'Medium', or 'Hard'  and press Enter, allow a moment for pokemon to load."));
+                );
 
         System.out.println(introMessage);
 

@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         MainDialogue main = new MainDialogue();
-        main.mediumMode(1);
+        main.runPokeGuesser();
        //Stats st = new Stats();
        //System.out.println(st.getName());
 
