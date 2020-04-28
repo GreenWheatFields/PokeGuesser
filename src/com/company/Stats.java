@@ -15,11 +15,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Stats {
-
     public Stats ()throws IOException {
 
     }
-
 
     int one = 1;
     int parseText = 2;

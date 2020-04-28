@@ -180,8 +180,6 @@ public class MainDialogue{
 
             int tries = 0;
 
-
-
             totalShown++;
 
             if (totalShown >= select.length){
@@ -190,47 +188,27 @@ public class MainDialogue{
             }
             randomPoke = select[totalShown];
 
-            System.out.println(upperBound +"lol" + lowerBound);
+            System.out.println(totalShown + " out of " + (upperBound - lowerBound));
             Stats stats = new Stats();
             System.out.println("Generating random pokemon on Medium Mode...");
 
-            //all this below is redundant
-            name = stats.getName();
-            name = name.substring(0,1).toUpperCase() + name.substring(1);
-            height = stats.getHeight();
-            heightInInches = (height * 3.93701);
-            weight = stats.getWeight();
-            weightInLbs = (weight / 4.536);
-            //id = stats.getID();
+            name = stats.getName().substring(0,1).toUpperCase() + stats.name.substring(1);
             baseExp = stats.getBaseExperience();
-            type1 = stats.getType();
-            type2 = stats.getType2();
             firstLetter = String.valueOf(name.charAt(0)).toUpperCase();
             String firstThreeChars;
             if (name.length() >= 3) {
-                firstThreeChars = name.substring(0, 4);
+                firstThreeChars = name.substring(0, 3);
             }
             else {
                 firstThreeChars = name;
             }
-            pokeDesc = stats.getPokeDesc(4);
-            String longerDesc = stats.getPokeDesc(8);
-            detailedSprite = stats.getDetailedSprite();
-            frontSprite = stats.getFrontSprite();
-            firstGens = stats.getFirstGens();
             int reveals = 0;
             int hints = 0;
 
-            if (type2 == null){
-                type2 = "";
-                type2Message = "";
-            }else{
-                type2Message = " and " + type2;
-            }
-            String message = (("ID number: " + stats.getID()) + ("\nFirst Appearance: " + firstGens) + ("\nType: " + type1 + type2Message) +
-                    ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
-                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'") + ("\nIn game sprite")
-                    + ("\nFront: " + frontSprite) + ("\nType your guess below. \nTo reveal hints type 'reveal'. You have four hints"));
+            String message = (("ID number: " + stats.getID()) + ("\nFirst Appearance: " + stats.getFirstGens()) + ("\nType: " + stats.getType() +"/" +  stats.getType2()) +
+                    ("\nHeight: " + df2.format(stats.getHeight() * 3.93701) + " inches") + ("\nWeight: " + df2.format((stats.getWeight() / 4.536)) + " pounds")
+                    + ("\nSome lines from Bulbapedia: \n" + "'"  + stats.getPokeDesc(4) + "'") + ("\nIn game sprite")
+                    + ("\nFront: " + stats.getFrontSprite()) + ("\nType your guess below. \nTo reveal hints type 'reveal'. You have four hints"));
             System.out.println(message);
 
             guess = userInput.nextLine();
@@ -257,18 +235,16 @@ public class MainDialogue{
                         case 2:
                             tries++;
                             System.out.println("Tries: " + tries);
-                            System.out.println("Longer description " +  longerDesc);
+                            System.out.println("Longer description " +  stats.getPokeDesc(8));
                             reveals++;
                             hints++;
                             guess = userInput.nextLine();
                             break;
-
-
                         case 3:
                             reveals++;
                             tries++;
                             System.out.println("Tries: " + tries);
-                            System.out.println("Detailed Sprite : " + detailedSprite);
+                            System.out.println("Detailed Sprite : " + stats.getDetailedSprite());
 
                             hints++;
                             guess = userInput.nextLine();
