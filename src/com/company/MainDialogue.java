@@ -62,7 +62,7 @@ public class MainDialogue{
                 case "easy":
                     easy = 1;
                     x = 2;
-                    easyMode(easy);
+                    easyMode(easy, select);
                     break;
                 case "medium":
                     x =2;
@@ -82,7 +82,7 @@ public class MainDialogue{
                         mediumMode(medium,select);
                     }else if (mode.equalsIgnoreCase("easy")){
                         easy =1;
-                        easyMode(easy);
+                        easyMode(easy, select);
                     }else if (mode.equalsIgnoreCase("hard")){
                         hard = 1;
                         hardMode(hard);
@@ -94,9 +94,21 @@ public class MainDialogue{
         }
     }
 
-    public void easyMode(int easy) throws IOException{
+    public void easyMode(int easy, int[] select) throws IOException{
         while (easy < 2){
             int tries = 0;
+
+            totalShown++;
+
+            if (totalShown >= select.length){
+                System.out.println("out of pokemon");
+                break;
+            }
+            randomPoke = select[totalShown];
+
+            System.out.println(totalShown + " out of " + (upperBound - lowerBound));
+
+
             Stats stats = new Stats();
             System.out.println("Generating random pokemon on Easy Mode...");
             // int r = stats.randomPoke; randomPoke matches the id, does not return null. perhaps r could be added to an array, idk.
@@ -160,7 +172,7 @@ public class MainDialogue{
             if (replay.equalsIgnoreCase("Y")){
                 easy--;
             }else if(replay.equalsIgnoreCase("R")){
-                easyMode(1);
+                easyMode(1, select);
             }else if (replay.equalsIgnoreCase("A")){
                 runPokeGuesser();
             }
