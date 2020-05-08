@@ -124,10 +124,10 @@ public class MainDialogue{
             }else{
                 type2Message = " and " + type2;
             }
-            String message = (("ID number: " + id) + ("\nFirst Appearance:" + firstGens) + ("\nType: " + type1 + type2Message) +
-                    ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(heightInInches) + " inches") + ("\nWeight: " + df2.format(weightInLbs) + " pounds")
-                    + ("\nSome lines from Bulbapedia: \n" + "'"  + pokeDesc + "'\n") + ("\nDetailed Sprite: ")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
-                    + detailedSprite + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
+            String message = (("ID number: " + stats.getID()) + ("\nFirst Appearance:" + stats.getFirstGens()) + ("\nType: " + stats.getType() + type2Message) +
+                    ("\nFirst Letter: " + firstLetter) + ("\nHeight: " + df2.format(stats.getHeight() * 3.93701) + " inches") + ("\nWeight: " + df2.format(stats.getWeight() / 4.536) + " pounds")
+                    + ("\nSome lines from Bulbapedia: \n" + "'"  + stats.getPokeDesc(8) + "'\n") + ("\nDetailed Sprite: ")// i want to display detailed sprites for easy mode, but because detailed sprite urls contain the name, i cant right now
+                    + stats.getDetailedSprite() + ("\nType your guess below. \nTo reveal the full name type 'reveal'"));
             System.out.println(message);
             guess = userInput.nextLine();
             while (!guess.equalsIgnoreCase(name)) {
@@ -393,7 +393,7 @@ public class MainDialogue{
 
         switch (z){
             case "gen 1":
-                upperBound = 4;
+                upperBound = 152;
                 lowerBound = 1;
                 break;
             case "gen 2":
